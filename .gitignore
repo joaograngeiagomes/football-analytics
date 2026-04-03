@@ -1,0 +1,8 @@
+*.json
+.env
+__pycache__/
+*.pyc
+.venv/
+dbt/target/
+dbt/logs/
+dbt/.user.yml

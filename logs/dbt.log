@@ -1,0 +1,164 @@
+[0m23:55:45.397548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022620848520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621B04A00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621B04820>]}
+
+
+============================== 23:55:45.398304 | 948e4f0b-e0a5-4771-81d1-650f13d36060 ==============================
+[0m23:55:45.398304 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:55:45.398304 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'use_colors': 'True', 'invocation_command': 'dbt init dbt', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m23:56:12.073024 [debug] [MainThread]: Starter project path: C:\Users\João\Desktop\Data-Portfolio\football-analytics\.venv\lib\site-packages\dbt\include\starter_project
+[0m23:56:12.167238 [info ] [MainThread]: 
+Your new dbt project "football_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:56:12.167238 [info ] [MainThread]: Setting up your profile.
+[0m23:59:49.982230 [info ] [MainThread]: Profile football_analytics written to C:\Users\João\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m23:59:49.986159 [debug] [MainThread]: Command `dbt init` succeeded at 23:59:49.986159 after 244.69 seconds
+[0m23:59:49.988284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022620848520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621B04730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621B09900>]}
+[0m23:59:49.990287 [debug] [MainThread]: Flushing usage events
+[0m23:59:50.535003 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:00:00.887124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B10058580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B11304A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B11304880>]}
+
+
+============================== 00:00:00.891163 | a6d7903e-fefc-43a5-8fe1-fb6f16eb7729 ==============================
+[0m00:00:00.891163 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:00:00.893130 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:00:00.917799 [info ] [MainThread]: dbt version: 1.11.7
+[0m00:00:00.917799 [info ] [MainThread]: python version: 3.10.7
+[0m00:00:00.917799 [info ] [MainThread]: python path: C:\Users\João\Desktop\Data-Portfolio\football-analytics\.venv\Scripts\python.exe
+[0m00:00:00.917799 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m00:00:02.317070 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.snowflake'
+[0m00:00:02.318084 [info ] [MainThread]: Using profiles dir at C:\Users\João\.dbt
+[0m00:00:02.320085 [info ] [MainThread]: Using profiles.yml file at C:\Users\João\.dbt\profiles.yml
+[0m00:00:02.321074 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt_project.yml
+[0m00:00:02.321663 [info ] [MainThread]: Configuration:
+[0m00:00:02.322971 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m00:00:02.323984 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m00:00:02.324982 [info ] [MainThread]: Required dependencies:
+[0m00:00:02.326015 [debug] [MainThread]: Executing "git --help"
+[0m00:00:02.386719 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:00:02.387722 [debug] [MainThread]: STDERR: "b''"
+[0m00:00:02.388725 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:00:02.390722 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m00:00:02.391721 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m00:00:02.393725 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "gaming_dbt", target "dev" invalid: Runtime Error
+    Could not find adapter type snowflake!
+
+
+[0m00:00:02.394720 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt_project.yml> not found
+
+[0m00:00:02.397721 [debug] [MainThread]: Command `dbt debug` failed at 00:00:02.397721 after 1.62 seconds
+[0m00:00:02.399726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B10058580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B226C7010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024B11304820>]}
+[0m00:00:02.401249 [debug] [MainThread]: Flushing usage events
+[0m00:00:02.923561 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:02:14.803371 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020836E78580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020838124A60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020838124880>]}
+
+
+============================== 00:02:14.813421 | 28ec2560-a98a-4092-9cb5-820087e8c244 ==============================
+[0m00:02:14.813421 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:02:14.813421 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m00:02:14.846257 [info ] [MainThread]: dbt version: 1.11.7
+[0m00:02:14.848702 [info ] [MainThread]: python version: 3.10.7
+[0m00:02:14.848702 [info ] [MainThread]: python path: C:\Users\João\Desktop\Data-Portfolio\football-analytics\.venv\Scripts\python.exe
+[0m00:02:14.848702 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m00:02:16.431303 [info ] [MainThread]: Error importing adapter: No module named 'dbt.adapters.snowflake'
+[0m00:02:16.431303 [info ] [MainThread]: Using profiles dir at C:\Users\João\.dbt
+[0m00:02:16.431303 [info ] [MainThread]: Using profiles.yml file at C:\Users\João\.dbt\profiles.yml
+[0m00:02:16.431303 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt_project.yml
+[0m00:02:16.431303 [info ] [MainThread]: Configuration:
+[0m00:02:16.431303 [info ] [MainThread]:   profiles.yml file [[31mERROR invalid[0m]
+[0m00:02:16.437820 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m00:02:16.438853 [info ] [MainThread]: Required dependencies:
+[0m00:02:16.439829 [debug] [MainThread]: Executing "git --help"
+[0m00:02:16.482590 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:02:16.482590 [debug] [MainThread]: STDERR: "b''"
+[0m00:02:16.482590 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:02:16.482590 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m00:02:16.482590 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m00:02:16.482590 [info ] [MainThread]: Could not load dbt_project.yml
+Profile loading failed for the following reason:
+Runtime Error
+  Credentials in profile "gaming_dbt", target "dev" invalid: Runtime Error
+    Could not find adapter type snowflake!
+
+
+[0m00:02:16.497887 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt_project.yml> not found
+
+[0m00:02:16.500663 [debug] [MainThread]: Command `dbt debug` failed at 00:02:16.500663 after 1.81 seconds
+[0m00:02:16.501701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020836E78580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000208494E7010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020838124820>]}
+[0m00:02:16.501701 [debug] [MainThread]: Flushing usage events
+[0m00:02:17.079332 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m09:52:16.046684 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB53985B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB6660A90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB66608B0>]}
+
+
+============================== 09:52:16.056686 | 0e9d58c3-bc52-4c90-b4cb-8abb7047cf32 ==============================
+[0m09:52:16.056686 [info ] [MainThread]: Running with dbt=1.11.7
+[0m09:52:16.058440 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\logs'}
+[0m09:52:16.103997 [info ] [MainThread]: dbt version: 1.11.7
+[0m09:52:16.103997 [info ] [MainThread]: python version: 3.10.7
+[0m09:52:16.103997 [info ] [MainThread]: python path: C:\Users\João\Desktop\Data-Portfolio\football-analytics\.venv\Scripts\python.exe
+[0m09:52:16.108079 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m09:52:18.115106 [info ] [MainThread]: Using profiles dir at C:\Users\João\.dbt
+[0m09:52:18.115106 [info ] [MainThread]: Using profiles.yml file at C:\Users\João\.dbt\profiles.yml
+[0m09:52:18.115106 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt_project.yml
+[0m09:52:18.118587 [info ] [MainThread]: adapter type: bigquery
+[0m09:52:18.118587 [info ] [MainThread]: adapter version: 1.8.2
+[0m09:52:18.286883 [info ] [MainThread]: Configuration:
+[0m09:52:18.286883 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:52:18.294216 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:52:18.294216 [info ] [MainThread]: Required dependencies:
+[0m09:52:18.295743 [debug] [MainThread]: Executing "git --help"
+[0m09:52:18.352505 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:52:18.352505 [debug] [MainThread]: STDERR: "b''"
+[0m09:52:18.356273 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:52:18.356273 [info ] [MainThread]: Connection:
+[0m09:52:18.358757 [info ] [MainThread]:   method: service-account
+[0m09:52:18.358757 [info ] [MainThread]:   database: football-analytics-492122
+[0m09:52:18.360521 [info ] [MainThread]:   execution_project: football-analytics-492122
+[0m09:52:18.360521 [info ] [MainThread]:   schema: raw
+[0m09:52:18.360521 [info ] [MainThread]:   location: EU
+[0m09:52:18.360521 [info ] [MainThread]:   priority: interactive
+[0m09:52:18.360521 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m09:52:18.360521 [info ] [MainThread]:   impersonate_service_account: None
+[0m09:52:18.366836 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m09:52:18.366836 [info ] [MainThread]:   job_retries: 1
+[0m09:52:18.368591 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m09:52:18.368591 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m09:52:18.368591 [info ] [MainThread]:   timeout_seconds: 300
+[0m09:52:18.372131 [info ] [MainThread]:   client_id: None
+[0m09:52:18.372131 [info ] [MainThread]:   token_uri: None
+[0m09:52:18.374448 [info ] [MainThread]:   dataproc_region: None
+[0m09:52:18.374448 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m09:52:18.376757 [info ] [MainThread]:   gcs_bucket: None
+[0m09:52:18.377266 [info ] [MainThread]:   dataproc_batch: None
+[0m09:52:18.379620 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m09:52:19.080514 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m09:52:19.080514 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:52:19.134527 [debug] [MainThread]: On debug: select 1 as id
+[0m09:52:23.215644 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:50882133-2a38-4eed-bcd0-c880def06cb3&page=queryresults
+[0m09:52:23.774149 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:52:23.774149 [info ] [MainThread]: [32mAll checks passed![0m
+[0m09:52:23.788070 [debug] [MainThread]: Command `dbt debug` succeeded at 09:52:23.788070 after 7.94 seconds
+[0m09:52:23.790090 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:52:23.792109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB53985B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB6615FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB5634DF0>]}
+[0m09:52:23.794126 [debug] [MainThread]: Flushing usage events
+[0m09:52:25.036405 [debug] [MainThread]: An error was encountered while trying to flush usage events

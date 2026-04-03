@@ -1,0 +1,7 @@
+dbt-bigquery
+google-cloud-bigquery
+requests
+python-dotenv
+pandas
+streamlit
+apache-airflow
