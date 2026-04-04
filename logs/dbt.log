@@ -162,3 +162,73 @@ Runtime Error
 [0m09:52:23.792109 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB53985B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB6615FF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000025AB5634DF0>]}
 [0m09:52:23.794126 [debug] [MainThread]: Flushing usage events
 [0m09:52:25.036405 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:27:40.796840 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013573A1C4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013574CD4970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013574CD4790>]}
+
+
+============================== 00:27:40.806748 | abc95f9c-8985-40cc-8398-40a1bc5f06ac ==============================
+[0m00:27:40.806748 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:27:40.808009 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\logs'}
+[0m00:27:40.857538 [info ] [MainThread]: dbt version: 1.11.7
+[0m00:27:40.859059 [info ] [MainThread]: python version: 3.10.7
+[0m00:27:40.860086 [info ] [MainThread]: python path: C:\Users\João\Desktop\Data-Portfolio\football-analytics\.venv\Scripts\python.exe
+[0m00:27:40.862097 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m00:27:56.192300 [info ] [MainThread]: Using profiles dir at C:\Users\João\.dbt
+[0m00:27:56.192300 [info ] [MainThread]: Using profiles.yml file at C:\Users\João\.dbt\profiles.yml
+[0m00:27:56.200777 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt_project.yml
+[0m00:27:56.200777 [info ] [MainThread]: adapter type: bigquery
+[0m00:27:56.203647 [info ] [MainThread]: adapter version: 1.8.2
+[0m00:27:56.212010 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m00:27:56.212010 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'abc95f9c-8985-40cc-8398-40a1bc5f06ac', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013506BCBA30>]}
+[0m00:27:56.400950 [info ] [MainThread]: Configuration:
+[0m00:27:56.400950 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m00:27:56.400950 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m00:27:56.404343 [info ] [MainThread]: Required dependencies:
+[0m00:27:56.404343 [debug] [MainThread]: Executing "git --help"
+[0m00:27:56.476880 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Set `HEAD` or the index to a known state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:27:56.478036 [debug] [MainThread]: STDERR: "b''"
+[0m00:27:56.478036 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:27:56.478036 [info ] [MainThread]: Connection:
+[0m00:27:56.478036 [info ] [MainThread]:   method: service-account
+[0m00:27:56.478036 [info ] [MainThread]:   database: football-analytics-492122
+[0m00:27:56.478036 [info ] [MainThread]:   execution_project: football-analytics-492122
+[0m00:27:56.478036 [info ] [MainThread]:   schema: raw
+[0m00:27:56.484197 [info ] [MainThread]:   location: EU
+[0m00:27:56.485330 [info ] [MainThread]:   priority: interactive
+[0m00:27:56.486592 [info ] [MainThread]:   maximum_bytes_billed: None
+[0m00:27:56.487548 [info ] [MainThread]:   impersonate_service_account: None
+[0m00:27:56.488394 [info ] [MainThread]:   job_retry_deadline_seconds: None
+[0m00:27:56.488394 [info ] [MainThread]:   job_retries: 1
+[0m00:27:56.488394 [info ] [MainThread]:   job_creation_timeout_seconds: None
+[0m00:27:56.491540 [info ] [MainThread]:   job_execution_timeout_seconds: 300
+[0m00:27:56.494173 [info ] [MainThread]:   timeout_seconds: 300
+[0m00:27:56.494173 [info ] [MainThread]:   client_id: None
+[0m00:27:56.496380 [info ] [MainThread]:   token_uri: None
+[0m00:27:56.497670 [info ] [MainThread]:   dataproc_region: None
+[0m00:27:56.497670 [info ] [MainThread]:   dataproc_cluster_name: None
+[0m00:27:56.499404 [info ] [MainThread]:   gcs_bucket: None
+[0m00:27:56.500569 [info ] [MainThread]:   dataproc_batch: None
+[0m00:27:56.501145 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m00:27:57.503813 [debug] [MainThread]: Acquiring new bigquery connection 'debug'
+[0m00:27:57.509113 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:27:57.604994 [debug] [MainThread]: On debug: select 1 as id
+[0m00:27:58.777246 [debug] [MainThread]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:aea4093c-c825-4520-8cac-7e575b59b3a4&page=queryresults
+[0m00:27:59.271724 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m00:27:59.274152 [info ] [MainThread]: [32mAll checks passed![0m
+[0m00:27:59.276147 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigTargetPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m00:27:59.276147 [debug] [MainThread]: Command `dbt debug` succeeded at 00:27:59.276147 after 18.68 seconds
+[0m00:27:59.276147 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m00:27:59.281606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013573A1C4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013573CDBDC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013574D80940>]}
+[0m00:27:59.282618 [debug] [MainThread]: Flushing usage events
+[0m00:28:00.492674 [debug] [MainThread]: An error was encountered while trying to flush usage events
