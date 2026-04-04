@@ -232,3 +232,204 @@ parsing.
 [0m00:27:59.281606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013573A1C4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013573CDBDC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013574D80940>]}
 [0m00:27:59.282618 [debug] [MainThread]: Flushing usage events
 [0m00:28:00.492674 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:28:51.780215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FED7DCC4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FED9080B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FED9080940>]}
+
+
+============================== 00:28:51.795625 | 60110f2e-ac9d-4e39-a795-d555afacde70 ==============================
+[0m00:28:51.795625 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:28:51.795625 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'invocation_command': 'dbt run --select stg_fixtures', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\logs'}
+[0m00:28:52.967757 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m00:28:52.967757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEA5334C0>]}
+[0m00:28:53.237863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEA48B220>]}
+[0m00:28:53.299568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEA48AF20>]}
+[0m00:28:53.299568 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m00:28:53.940535 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m00:28:54.143026 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:28:54.145779 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:28:54.147127 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:28:54.177832 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.football_analytics.marts
+- models.football_analytics.intermediate
+[0m00:28:54.299100 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEBBD0130>]}
+[0m00:28:54.424408 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m00:28:54.457018 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m00:28:54.489677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEBBD1B40>]}
+[0m00:28:54.489677 [info ] [MainThread]: Found 1 model, 3 sources, 519 macros
+[0m00:28:54.489677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEBBD1A80>]}
+[0m00:28:54.489677 [info ] [MainThread]: 
+[0m00:28:54.489677 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:28:54.489677 [info ] [MainThread]: 
+[0m00:28:54.489677 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:28:54.500592 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_football-analytics-492122'
+[0m00:28:54.501599 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:28:55.101929 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_football-analytics-492122, now create_football-analytics-492122_raw_staging)
+[0m00:28:55.108873 [debug] [ThreadPool]: Creating schema "database: "football-analytics-492122"
+schema: "raw_staging"
+"
+[0m00:28:55.123386 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:28:55.149556 [debug] [ThreadPool]: On create_football-analytics-492122_raw_staging: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "connection_name": "create_football-analytics-492122_raw_staging"} */
+create schema if not exists `football-analytics-492122`.`raw_staging`
+  
+[0m00:28:55.798944 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:759e202d-a9ac-4109-949e-fe16e202cc37&page=queryresults
+[0m00:28:57.331813 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_football-analytics-492122_raw_staging'
+[0m00:28:57.338427 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:28:57.840436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEBBD1A20>]}
+[0m00:28:57.848320 [debug] [Thread-1 (]: Began running node model.football_analytics.stg_fixtures
+[0m00:28:57.848320 [info ] [Thread-1 (]: 1 of 1 START sql view model raw_staging.stg_fixtures ........................... [RUN]
+[0m00:28:57.848320 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.football_analytics.stg_fixtures'
+[0m00:28:57.848320 [debug] [Thread-1 (]: Began compiling node model.football_analytics.stg_fixtures
+[0m00:28:57.870402 [debug] [Thread-1 (]: Writing injected SQL for node "model.football_analytics.stg_fixtures"
+[0m00:28:57.871103 [debug] [Thread-1 (]: Began executing node model.football_analytics.stg_fixtures
+[0m00:28:57.902670 [debug] [Thread-1 (]: Writing runtime sql for node "model.football_analytics.stg_fixtures"
+[0m00:28:57.906754 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:28:57.934654 [debug] [Thread-1 (]: On model.football_analytics.stg_fixtures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "model.football_analytics.stg_fixtures"} */
+
+
+  create or replace view `football-analytics-492122`.`raw_staging`.`stg_fixtures`
+  OPTIONS()
+  as select fixture_id
+, league_code
+, league_name
+, season
+, matchday
+, cast(datetime(timestamp(date)) as date) as fixture_date
+, status as fixture_status
+, home_team_id
+, home_team_name
+, away_team_id
+, away_team_name
+, home_goals as home_goals_fulltime
+, away_goals as away_goals_fulltime
+from `football-analytics-492122`.`raw`.`fixtures`;
+
+
+[0m00:28:58.649876 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:01e81852-c1f7-4220-b626-15e909f132d6&page=queryresults
+[0m00:28:58.997697 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '60110f2e-ac9d-4e39-a795-d555afacde70', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEBC25900>]}
+[0m00:28:58.997697 [info ] [Thread-1 (]: 1 of 1 OK created sql view model raw_staging.stg_fixtures ...................... [[32mCREATE VIEW (0 processed)[0m in 1.14s]
+[0m00:28:58.997697 [debug] [Thread-1 (]: Finished running node model.football_analytics.stg_fixtures
+[0m00:28:59.006596 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:28:59.006596 [debug] [MainThread]: Connection 'create_football-analytics-492122_raw_staging' was properly closed.
+[0m00:28:59.006596 [debug] [MainThread]: Connection 'list_football-analytics-492122_raw_staging' was properly closed.
+[0m00:28:59.006596 [debug] [MainThread]: Connection 'model.football_analytics.stg_fixtures' was properly closed.
+[0m00:28:59.006596 [info ] [MainThread]: 
+[0m00:28:59.012755 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 4.52 seconds (4.52s).
+[0m00:28:59.014658 [debug] [MainThread]: Command end result
+[0m00:28:59.053915 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m00:28:59.071842 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m00:28:59.082836 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\run_results.json
+[0m00:28:59.082836 [info ] [MainThread]: 
+[0m00:28:59.085823 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:28:59.086934 [info ] [MainThread]: 
+[0m00:28:59.087933 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:28:59.089931 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigTargetPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m00:28:59.092361 [debug] [MainThread]: Command `dbt run` succeeded at 00:28:59.092361 after 7.41 seconds
+[0m00:28:59.093364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FED7DCC4F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FED808EC20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FEEA48B4F0>]}
+[0m00:28:59.094365 [debug] [MainThread]: Flushing usage events
+[0m00:28:59.762049 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:35:33.290196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CD7E204F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CD90D0B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CD90D0940>]}
+
+
+============================== 00:35:33.300618 | aae1c7c1-7609-48bf-90f9-700ac489ac3f ==============================
+[0m00:35:33.300618 [info ] [MainThread]: Running with dbt=1.11.7
+[0m00:35:33.300618 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --select stg_fixtures', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\logs'}
+[0m00:35:34.488112 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m00:35:34.489074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEB5534C0>]}
+[0m00:35:34.755562 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CD90D0BE0>]}
+[0m00:35:34.840218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEA4DAF20>]}
+[0m00:35:34.863303 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m00:35:35.453991 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m00:35:35.637772 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:35:35.638781 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m00:35:35.638781 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:35:35.646772 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.football_analytics.marts
+- models.football_analytics.intermediate
+[0m00:35:35.703455 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEBBB4130>]}
+[0m00:35:35.795568 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m00:35:35.811687 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m00:35:35.836868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEB54FB80>]}
+[0m00:35:35.840344 [info ] [MainThread]: Found 1 model, 3 sources, 520 macros
+[0m00:35:35.840344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEBB30BE0>]}
+[0m00:35:35.842792 [info ] [MainThread]: 
+[0m00:35:35.842792 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:35:35.842792 [info ] [MainThread]: 
+[0m00:35:35.848238 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m00:35:35.851231 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_football-analytics-492122'
+[0m00:35:35.852234 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:35:36.420640 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_football-analytics-492122_staging'
+[0m00:35:36.424782 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:35:36.941370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEBBB7DC0>]}
+[0m00:35:36.951848 [debug] [Thread-1 (]: Began running node model.football_analytics.stg_fixtures
+[0m00:35:36.951848 [info ] [Thread-1 (]: 1 of 1 START sql view model staging.stg_fixtures ............................... [RUN]
+[0m00:35:36.951848 [debug] [Thread-1 (]: Acquiring new bigquery connection 'model.football_analytics.stg_fixtures'
+[0m00:35:36.957414 [debug] [Thread-1 (]: Began compiling node model.football_analytics.stg_fixtures
+[0m00:35:36.962207 [debug] [Thread-1 (]: Writing injected SQL for node "model.football_analytics.stg_fixtures"
+[0m00:35:36.973286 [debug] [Thread-1 (]: Began executing node model.football_analytics.stg_fixtures
+[0m00:35:37.011163 [debug] [Thread-1 (]: Writing runtime sql for node "model.football_analytics.stg_fixtures"
+[0m00:35:37.013122 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m00:35:37.032255 [debug] [Thread-1 (]: On model.football_analytics.stg_fixtures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "model.football_analytics.stg_fixtures"} */
+
+
+  create or replace view `football-analytics-492122`.`staging`.`stg_fixtures`
+  OPTIONS()
+  as select fixture_id
+, league_code
+, league_name
+, season
+, matchday
+, cast(datetime(timestamp(date)) as date) as fixture_date
+, status as fixture_status
+, home_team_id
+, home_team_name
+, away_team_id
+, away_team_name
+, home_goals as home_goals_fulltime
+, away_goals as away_goals_fulltime
+from `football-analytics-492122`.`raw`.`fixtures`;
+
+
+[0m00:35:37.759160 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:fe671076-901a-449d-a634-f92baf00a395&page=queryresults
+[0m00:35:38.121218 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'aae1c7c1-7609-48bf-90f9-700ac489ac3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEBBA5450>]}
+[0m00:35:38.131593 [info ] [Thread-1 (]: 1 of 1 OK created sql view model staging.stg_fixtures .......................... [[32mCREATE VIEW (0 processed)[0m in 1.17s]
+[0m00:35:38.133153 [debug] [Thread-1 (]: Finished running node model.football_analytics.stg_fixtures
+[0m00:35:38.133153 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:35:38.133153 [debug] [MainThread]: Connection 'list_football-analytics-492122' was properly closed.
+[0m00:35:38.137110 [debug] [MainThread]: Connection 'list_football-analytics-492122_staging' was properly closed.
+[0m00:35:38.137110 [debug] [MainThread]: Connection 'model.football_analytics.stg_fixtures' was properly closed.
+[0m00:35:38.137110 [info ] [MainThread]: 
+[0m00:35:38.137110 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 2.29 seconds (2.29s).
+[0m00:35:38.140916 [debug] [MainThread]: Command end result
+[0m00:35:38.177529 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m00:35:38.177529 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m00:35:38.182662 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\run_results.json
+[0m00:35:38.182662 [info ] [MainThread]: 
+[0m00:35:38.182662 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:35:38.182662 [info ] [MainThread]: 
+[0m00:35:38.182662 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m00:35:38.198302 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigTargetPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m00:35:38.200423 [debug] [MainThread]: Command `dbt run` succeeded at 00:35:38.200423 after 5.00 seconds
+[0m00:35:38.201413 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CD7E204F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CEBBDDE10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026CD511EBF0>]}
+[0m00:35:38.202419 [debug] [MainThread]: Flushing usage events
+[0m00:35:38.783160 [debug] [MainThread]: An error was encountered while trying to flush usage events

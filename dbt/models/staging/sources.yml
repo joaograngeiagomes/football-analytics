@@ -1,0 +1,11 @@
+version: 2
+
+sources: 
+  - name: raw
+    database: football-analytics-492122
+    schema: raw
+    tables:
+      - name: fixtures
+      - name: standings
+      - name: top_scorers
+      
