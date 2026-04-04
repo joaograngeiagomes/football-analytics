@@ -66,15 +66,15 @@ def main():
     all_fixtures = []
 
     for league_name, league_code in LEAGUES.items():
-        print(f"A extrair fixtures: {league_name}...")
+        print(f"Extracting fixtures: {league_name}...")
         fixtures = get_fixtures(league_code)
         for match in fixtures:
             parsed = parse_fixture(match, league_code)
             all_fixtures.append(parsed)
-        print(f"  → {len(fixtures)} jogos encontrados")
+        print(f"  → {len(fixtures)} fixtures found")
 
-    print(f"\nTotal: {len(all_fixtures)} fixtures extraídos")
-    print("A carregar no BigQuery...")
+    print(f"\nTotal: {len(all_fixtures)} extracted fixtures")
+    print("Loading to BigQuery...")
     load_json_to_bigquery(all_fixtures, "raw", "fixtures", SCHEMA)
 
 if __name__ == "__main__":
