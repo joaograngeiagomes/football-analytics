@@ -22,4 +22,4 @@ def load_json_to_bigquery(data: list, dataset: str, table: str, schema: list) ->
     job = client.load_table_from_json(data, table_ref, job_config=job_config)
     job.result()
 
-    print(f"✓ {len(data)} registos carregados em {table_ref}")
+    print(f"✓ {len(data)} rows loaded in {table_ref}")
