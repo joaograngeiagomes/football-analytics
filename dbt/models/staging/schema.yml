@@ -1,0 +1,220 @@
+version: 2
+
+models:
+  - name: stg_fixtures
+    description: "Fixtures staging containing all fixtures for Premier League, La Liga, Primeira Liga and Champions League"
+    columns:
+      - name: fixture_id
+        description: "Unique identifier for each fixture"
+        tests:
+          - unique
+          - not_null
+
+      - name: league_code
+        description: "League code (e.g. PL, PD, CL, PPL)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year (e.g. 2024)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: fixture_date
+        description: "Date of the fixture"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: fixture_status
+        description: "Status of the fixture (e.g. FINISHED, SCHEDULED)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_team_id
+        description: "Unique identifier for the home team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_team_name
+        description: "Name of the home team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_team_id
+        description: "Unique identifier for the away team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_team_name
+        description: "Name of the away team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: matchday
+        description: "Matchday number (nullable for knockout stages)"
+
+      - name: home_goals_fulltime
+        description: "Goals scored by home team at full time (null if not played)"
+
+      - name: away_goals_fulltime
+        description: "Goals scored by away team at full time (null if not played)"
+
+  - name: stg_standings
+    description: "Standings staging containing the current standings for Premier League, La Liga, Primeira Liga and Champions League"
+    columns:
+      - name: league_code
+        description: "League code (e.g. PL, PD, CL, PPL)"
+        tests:
+          - not_null
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year (e.g. 2024)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: position
+        description: "Current position in the standings"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_id
+        description: "Unique identifier for the team"
+        tests:
+          - not_null
+
+      - name: team_name
+        description: "Name of the team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: matches_played
+        description: "Number of matches played"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: matches_won
+        description: "Number of matches won"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: matches_draw
+        description: "Number of matches drawn"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: matches_lost
+        description: "Number of matches lost"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: points
+        description: "Total points"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: goals_for
+        description: "Total goals scored"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: goals_against
+        description: "Total goals conceded"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: goal_difference
+        description: "Goal difference (goals_for - goals_against)"
+        tests:
+          - not_null:
+              severity: warn
+
+  - name: stg_top_scorers
+    description: "Top scorers staging containing the top scorers for Premier League, La Liga, Primeira Liga and Champions League"
+    columns:
+      - name: league_code
+        description: "League code (e.g. PL, PD, CL, PPL)"
+        tests:
+          - not_null
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year (e.g. 2024)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: player_id
+        description: "Unique identifier for the player"
+        tests:
+          - not_null
+
+      - name: player_name
+        description: "Full name of the player"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_id
+        description: "Unique identifier for the team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_name
+        description: "Name of the team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_goals
+        description: "Total goals scored in the competition"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_assists
+        description: "Total assists in the competition"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_penalties
+        description: "Total penalties scored in the competition"
+        tests:
+          - not_null:
+              severity: warn

@@ -716,3 +716,2392 @@ parsing.
 [0m22:37:47.722029 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001432EA504F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000143427EAEC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001432BD2EBF0>]}
 [0m22:37:47.723030 [debug] [MainThread]: Flushing usage events
 [0m22:37:48.329375 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:09:24.138518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C2ED8550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C4190CA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C4190AC0>]}
+
+
+============================== 23:09:24.138518 | 9bd14902-5ac1-4484-b2d2-5eb612384eca ==============================
+[0m23:09:24.138518 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:09:24.152277 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test --select stg_fixtures', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\logs'}
+[0m23:09:25.606785 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m23:09:25.607704 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9bd14902-5ac1-4484-b2d2-5eb612384eca', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0D661B4F0>]}
+[0m23:09:25.774199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9bd14902-5ac1-4484-b2d2-5eb612384eca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C4190B20>]}
+[0m23:09:25.854871 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9bd14902-5ac1-4484-b2d2-5eb612384eca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C3FAA560>]}
+[0m23:09:25.854871 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m23:09:26.370344 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:09:26.627929 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:09:26.627929 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:09:26.627929 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:09:26.627929 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.football_analytics.marts
+- models.football_analytics.intermediate
+[0m23:09:26.706581 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9bd14902-5ac1-4484-b2d2-5eb612384eca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0D6D26140>]}
+[0m23:09:26.837374 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m23:09:26.837374 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m23:09:26.899937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9bd14902-5ac1-4484-b2d2-5eb612384eca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0D6D25150>]}
+[0m23:09:26.899937 [info ] [MainThread]: Found 3 models, 11 data tests, 3 sources, 520 macros
+[0m23:09:26.899937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9bd14902-5ac1-4484-b2d2-5eb612384eca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0D55551E0>]}
+[0m23:09:26.905711 [info ] [MainThread]: 
+[0m23:09:26.905711 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:09:26.905711 [info ] [MainThread]: 
+[0m23:09:26.909266 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:09:26.917800 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_football-analytics-492122_staging'
+[0m23:09:26.917800 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:09:27.516698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9bd14902-5ac1-4484-b2d2-5eb612384eca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C414D4E0>]}
+[0m23:09:27.537781 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:09:27.537781 [info ] [Thread-1 (]: 1 of 11 START test not_null_stg_fixtures_away_team_id .......................... [RUN]
+[0m23:09:27.537781 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2'
+[0m23:09:27.537781 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:09:27.562669 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"
+[0m23:09:27.576870 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:09:27.602436 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"
+[0m23:09:27.605395 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:09:27.639768 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select away_team_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where away_team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:28.752195 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:7f75972d-2308-4fe3-837c-2adfe91f7f26&page=queryresults
+[0m23:09:29.335656 [error] [Thread-1 (]: 1 of 11 FAIL 5 not_null_stg_fixtures_away_team_id .............................. [[31mFAIL 5[0m in 1.80s]
+[0m23:09:29.335656 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:09:29.335656 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:09:29.335656 [info ] [Thread-1 (]: 2 of 11 START test not_null_stg_fixtures_away_team_name ........................ [RUN]
+[0m23:09:29.353443 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2, now test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be)
+[0m23:09:29.354459 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:09:29.364433 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"
+[0m23:09:29.365942 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:09:29.369760 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"
+[0m23:09:29.374184 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:29.412581 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select away_team_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where away_team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:30.547268 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:1a868030-3e8b-4b84-9df9-bec70e19a368&page=queryresults
+[0m23:09:31.071148 [warn ] [Thread-1 (]: 2 of 11 WARN 5 not_null_stg_fixtures_away_team_name ............................ [[33mWARN 5[0m in 1.72s]
+[0m23:09:31.071148 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:09:31.071148 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:09:31.071148 [info ] [Thread-1 (]: 3 of 11 START test not_null_stg_fixtures_fixture_date .......................... [RUN]
+[0m23:09:31.090782 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be, now test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403)
+[0m23:09:31.094829 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:09:31.111413 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"
+[0m23:09:31.131796 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:09:31.140121 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"
+[0m23:09:31.141946 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:31.189615 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_date
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:32.254612 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:7f4e2c21-a5f9-4eeb-926e-064670df09f3&page=queryresults
+[0m23:09:32.804918 [info ] [Thread-1 (]: 3 of 11 PASS not_null_stg_fixtures_fixture_date ................................ [[32mPASS[0m in 1.72s]
+[0m23:09:32.804918 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:09:32.804918 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:09:32.804918 [info ] [Thread-1 (]: 4 of 11 START test not_null_stg_fixtures_fixture_id ............................ [RUN]
+[0m23:09:32.804918 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403, now test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc)
+[0m23:09:32.804918 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:09:32.824210 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"
+[0m23:09:32.827375 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:09:32.827375 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"
+[0m23:09:32.827375 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:32.870709 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:33.943670 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:e8dd7d31-e1f8-479f-9a25-ac63fab0b56b&page=queryresults
+[0m23:09:34.470796 [info ] [Thread-1 (]: 4 of 11 PASS not_null_stg_fixtures_fixture_id .................................. [[32mPASS[0m in 1.67s]
+[0m23:09:34.470796 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:09:34.470796 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:09:34.470796 [info ] [Thread-1 (]: 5 of 11 START test not_null_stg_fixtures_fixture_status ........................ [RUN]
+[0m23:09:34.470796 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc, now test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89)
+[0m23:09:34.470796 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:09:34.470796 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"
+[0m23:09:34.470796 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:09:34.492801 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"
+[0m23:09:34.492801 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:34.534638 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_status
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:35.232623 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:eee5064b-c8cd-4a90-83f9-c475f58beca1&page=queryresults
+[0m23:09:35.780458 [info ] [Thread-1 (]: 5 of 11 PASS not_null_stg_fixtures_fixture_status .............................. [[32mPASS[0m in 1.31s]
+[0m23:09:35.780458 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:09:35.785236 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:09:35.785236 [info ] [Thread-1 (]: 6 of 11 START test not_null_stg_fixtures_home_team_id .......................... [RUN]
+[0m23:09:35.789388 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89, now test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d)
+[0m23:09:35.790535 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:09:35.803068 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"
+[0m23:09:35.805701 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:09:35.807712 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"
+[0m23:09:35.807712 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:35.877717 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select home_team_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where home_team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:36.737863 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:79c84ea3-057c-47e4-8cc9-ffa8961cd317&page=queryresults
+[0m23:09:37.246739 [error] [Thread-1 (]: 6 of 11 FAIL 5 not_null_stg_fixtures_home_team_id .............................. [[31mFAIL 5[0m in 1.46s]
+[0m23:09:37.248747 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:09:37.250497 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:09:37.250497 [info ] [Thread-1 (]: 7 of 11 START test not_null_stg_fixtures_home_team_name ........................ [RUN]
+[0m23:09:37.252504 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d, now test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60)
+[0m23:09:37.253352 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:09:37.259033 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"
+[0m23:09:37.259033 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:09:37.268325 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"
+[0m23:09:37.274157 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:37.307324 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select home_team_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where home_team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:38.221735 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:bd7fe769-6514-4a16-8e6c-90dc6bdcc521&page=queryresults
+[0m23:09:38.737617 [warn ] [Thread-1 (]: 7 of 11 WARN 5 not_null_stg_fixtures_home_team_name ............................ [[33mWARN 5[0m in 1.49s]
+[0m23:09:38.737617 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:09:38.737617 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:09:38.737617 [info ] [Thread-1 (]: 8 of 11 START test not_null_stg_fixtures_league_code ........................... [RUN]
+[0m23:09:38.752990 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60, now test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929)
+[0m23:09:38.753719 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:09:38.762956 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"
+[0m23:09:38.762956 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:09:38.762956 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"
+[0m23:09:38.774193 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:38.807452 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_code
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where league_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:39.709647 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:13b181a9-c9e5-47b0-812e-7559ed4acddf&page=queryresults
+[0m23:09:40.272314 [info ] [Thread-1 (]: 8 of 11 PASS not_null_stg_fixtures_league_code ................................. [[32mPASS[0m in 1.53s]
+[0m23:09:40.272314 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:09:40.272314 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:09:40.272314 [info ] [Thread-1 (]: 9 of 11 START test not_null_stg_fixtures_league_name ........................... [RUN]
+[0m23:09:40.272314 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929, now test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a)
+[0m23:09:40.272314 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:09:40.294573 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"
+[0m23:09:40.294573 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:09:40.294573 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"
+[0m23:09:40.294573 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:40.339118 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where league_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:41.337479 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:8ff77ead-36bf-4dbf-9eb2-dd100ead51b3&page=queryresults
+[0m23:09:41.878044 [info ] [Thread-1 (]: 9 of 11 PASS not_null_stg_fixtures_league_name ................................. [[32mPASS[0m in 1.61s]
+[0m23:09:41.878044 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:09:41.888910 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:09:41.888910 [info ] [Thread-1 (]: 10 of 11 START test not_null_stg_fixtures_season ............................... [RUN]
+[0m23:09:41.888910 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a, now test.football_analytics.not_null_stg_fixtures_season.71047028c7)
+[0m23:09:41.900970 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:09:41.909620 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_season.71047028c7"
+[0m23:09:41.909620 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:09:41.925049 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_season.71047028c7"
+[0m23:09:41.927042 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:41.959857 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_season.71047028c7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_season.71047028c7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select season
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where season is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:42.921017 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:f10737ce-1c30-4f7d-ae67-1ae1d47b0fae&page=queryresults
+[0m23:09:43.453728 [info ] [Thread-1 (]: 10 of 11 PASS not_null_stg_fixtures_season ..................................... [[32mPASS[0m in 1.56s]
+[0m23:09:43.453728 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:09:43.453728 [debug] [Thread-1 (]: Began running node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:09:43.453728 [info ] [Thread-1 (]: 11 of 11 START test unique_stg_fixtures_fixture_id ............................. [RUN]
+[0m23:09:43.453728 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_season.71047028c7, now test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d)
+[0m23:09:43.463441 [debug] [Thread-1 (]: Began compiling node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:09:43.475635 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"
+[0m23:09:43.475635 [debug] [Thread-1 (]: Began executing node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:09:43.484942 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"
+[0m23:09:43.484942 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:09:43.520928 [debug] [Thread-1 (]: On test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select fixture_id as unique_field
+  from `football-analytics-492122`.`staging`.`stg_fixtures`
+  where fixture_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:09:44.374395 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:2466b011-07a8-45f3-8588-2de16d492b25&page=queryresults
+[0m23:09:44.860767 [info ] [Thread-1 (]: 11 of 11 PASS unique_stg_fixtures_fixture_id ................................... [[32mPASS[0m in 1.41s]
+[0m23:09:44.860767 [debug] [Thread-1 (]: Finished running node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:09:44.875912 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:09:44.879974 [debug] [MainThread]: Connection 'list_football-analytics-492122_staging' was properly closed.
+[0m23:09:44.881962 [debug] [MainThread]: Connection 'test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d' was properly closed.
+[0m23:09:44.881962 [info ] [MainThread]: 
+[0m23:09:44.883182 [info ] [MainThread]: Finished running 11 data tests in 0 hours 0 minutes and 17.97 seconds (17.97s).
+[0m23:09:44.885241 [debug] [MainThread]: Command end result
+[0m23:09:44.926342 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m23:09:44.926342 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m23:09:44.950698 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\run_results.json
+[0m23:09:44.952684 [info ] [MainThread]: 
+[0m23:09:44.953692 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 2 warnings:[0m
+[0m23:09:44.954680 [info ] [MainThread]: 
+[0m23:09:44.956695 [error] [MainThread]: [31mFailure in test not_null_stg_fixtures_away_team_id (dbt/models\staging\schema.yml)[0m
+[0m23:09:44.958737 [error] [MainThread]:   Got 5 results, configured to fail if != 0
+[0m23:09:44.959774 [info ] [MainThread]: 
+[0m23:09:44.960772 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_away_team_id.sql
+[0m23:09:44.961769 [info ] [MainThread]: 
+[0m23:09:44.963771 [error] [MainThread]: [31mFailure in test not_null_stg_fixtures_home_team_id (dbt/models\staging\schema.yml)[0m
+[0m23:09:44.964776 [error] [MainThread]:   Got 5 results, configured to fail if != 0
+[0m23:09:44.966809 [info ] [MainThread]: 
+[0m23:09:44.967772 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_home_team_id.sql
+[0m23:09:44.968769 [info ] [MainThread]: 
+[0m23:09:44.970796 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_away_team_name (dbt/models\staging\schema.yml)[0m
+[0m23:09:44.971814 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:09:44.974093 [info ] [MainThread]: 
+[0m23:09:44.976002 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_away_team_name.sql
+[0m23:09:44.977013 [info ] [MainThread]: 
+[0m23:09:44.979379 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_home_team_name (dbt/models\staging\schema.yml)[0m
+[0m23:09:44.981637 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:09:44.982599 [info ] [MainThread]: 
+[0m23:09:44.983665 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_home_team_name.sql
+[0m23:09:44.987304 [info ] [MainThread]: 
+[0m23:09:44.989029 [info ] [MainThread]: Done. PASS=7 WARN=2 ERROR=2 SKIP=0 NO-OP=0 TOTAL=11
+[0m23:09:44.990649 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigTargetPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m23:09:44.993730 [debug] [MainThread]: Command `dbt test` failed at 23:09:44.993730 after 20.96 seconds
+[0m23:09:44.994744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C2ED8550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C38C01C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B0C38C23B0>]}
+[0m23:09:44.996731 [debug] [MainThread]: Flushing usage events
+[0m23:09:45.531417 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:14:49.392159 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76CDF04C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76E094C10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76E094A30>]}
+
+
+============================== 23:14:49.393763 | 0d9de071-0a49-43e5-a208-76b4cf1d0aa4 ==============================
+[0m23:14:49.393763 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:14:49.393763 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'invocation_command': 'dbt test --select stg_fixtures', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\logs'}
+[0m23:14:50.753361 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m23:14:50.753361 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '0d9de071-0a49-43e5-a208-76b4cf1d0aa4', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77F55B460>]}
+[0m23:14:50.963974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0d9de071-0a49-43e5-a208-76b4cf1d0aa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76E094A90>]}
+[0m23:14:51.037383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0d9de071-0a49-43e5-a208-76b4cf1d0aa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77EE86050>]}
+[0m23:14:51.037383 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m23:14:51.551486 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:14:51.757218 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:14:51.771215 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:14:51.771215 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:14:51.773707 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.football_analytics.marts
+- models.football_analytics.intermediate
+[0m23:14:51.845414 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0d9de071-0a49-43e5-a208-76b4cf1d0aa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77FC660B0>]}
+[0m23:14:51.971796 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m23:14:51.985427 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m23:14:52.021323 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0d9de071-0a49-43e5-a208-76b4cf1d0aa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77FC64DF0>]}
+[0m23:14:52.021323 [info ] [MainThread]: Found 3 models, 11 data tests, 3 sources, 520 macros
+[0m23:14:52.037340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d9de071-0a49-43e5-a208-76b4cf1d0aa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C77F465180>]}
+[0m23:14:52.037340 [info ] [MainThread]: 
+[0m23:14:52.037340 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:14:52.037340 [info ] [MainThread]: 
+[0m23:14:52.044026 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:14:52.048167 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_football-analytics-492122_staging'
+[0m23:14:52.048167 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:14:52.668864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0d9de071-0a49-43e5-a208-76b4cf1d0aa4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76E05D450>]}
+[0m23:14:52.685473 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:14:52.685473 [info ] [Thread-1 (]: 1 of 11 START test not_null_stg_fixtures_away_team_id .......................... [RUN]
+[0m23:14:52.685473 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2'
+[0m23:14:52.685473 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:14:52.707481 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"
+[0m23:14:52.707481 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:14:52.742209 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"
+[0m23:14:52.744164 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:14:52.777805 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select away_team_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where away_team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:14:53.791525 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:3dfafc3f-97c9-4009-80f3-724df2a716ec&page=queryresults
+[0m23:14:54.350618 [warn ] [Thread-1 (]: 1 of 11 WARN 5 not_null_stg_fixtures_away_team_id .............................. [[33mWARN 5[0m in 1.67s]
+[0m23:14:54.366400 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:14:54.366400 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:14:54.366400 [info ] [Thread-1 (]: 2 of 11 START test not_null_stg_fixtures_away_team_name ........................ [RUN]
+[0m23:14:54.366400 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2, now test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be)
+[0m23:14:54.374287 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:14:54.380441 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"
+[0m23:14:54.380441 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:14:54.389861 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"
+[0m23:14:54.389861 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:14:54.426496 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select away_team_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where away_team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:14:55.517029 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:c6b6e38f-04d5-4deb-890a-7a5fc25436f1&page=queryresults
+[0m23:14:56.029239 [warn ] [Thread-1 (]: 2 of 11 WARN 5 not_null_stg_fixtures_away_team_name ............................ [[33mWARN 5[0m in 1.66s]
+[0m23:14:56.029239 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:14:56.029239 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:14:56.029239 [info ] [Thread-1 (]: 3 of 11 START test not_null_stg_fixtures_fixture_date .......................... [RUN]
+[0m23:14:56.029239 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be, now test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403)
+[0m23:14:56.029239 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:14:56.043093 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"
+[0m23:14:56.045954 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:14:56.049047 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"
+[0m23:14:56.049047 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:14:56.087960 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_date
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:14:57.081301 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:b74f05b3-fc70-4c58-94bb-cdeacda0814c&page=queryresults
+[0m23:14:57.597485 [info ] [Thread-1 (]: 3 of 11 PASS not_null_stg_fixtures_fixture_date ................................ [[32mPASS[0m in 1.57s]
+[0m23:14:57.597485 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:14:57.597485 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:14:57.597485 [info ] [Thread-1 (]: 4 of 11 START test not_null_stg_fixtures_fixture_id ............................ [RUN]
+[0m23:14:57.605061 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403, now test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc)
+[0m23:14:57.607598 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:14:57.608170 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"
+[0m23:14:57.608170 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:14:57.621586 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"
+[0m23:14:57.624178 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:14:57.662378 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:14:58.408445 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:eefa83cd-69e5-4e12-8033-6010624fa7a7&page=queryresults
+[0m23:14:58.968299 [info ] [Thread-1 (]: 4 of 11 PASS not_null_stg_fixtures_fixture_id .................................. [[32mPASS[0m in 1.36s]
+[0m23:14:58.968299 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:14:58.968299 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:14:58.968299 [info ] [Thread-1 (]: 5 of 11 START test not_null_stg_fixtures_fixture_status ........................ [RUN]
+[0m23:14:58.983979 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc, now test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89)
+[0m23:14:58.983979 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:14:58.983979 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"
+[0m23:14:58.983979 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:14:58.999996 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"
+[0m23:14:59.002393 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:14:59.043158 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_status
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:14:59.753787 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:ada33947-d789-44c8-a32d-d9dfef630c12&page=queryresults
+[0m23:15:00.296676 [info ] [Thread-1 (]: 5 of 11 PASS not_null_stg_fixtures_fixture_status .............................. [[32mPASS[0m in 1.31s]
+[0m23:15:00.313138 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:15:00.313138 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:15:00.313138 [info ] [Thread-1 (]: 6 of 11 START test not_null_stg_fixtures_home_team_id .......................... [RUN]
+[0m23:15:00.313138 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89, now test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d)
+[0m23:15:00.324704 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:15:00.328945 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"
+[0m23:15:00.328945 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:15:00.337669 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"
+[0m23:15:00.339191 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:15:00.375221 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select home_team_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where home_team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:15:01.121268 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:2fd232da-66c7-429c-80d8-eef3a121ff44&page=queryresults
+[0m23:15:01.739833 [warn ] [Thread-1 (]: 6 of 11 WARN 5 not_null_stg_fixtures_home_team_id .............................. [[33mWARN 5[0m in 1.43s]
+[0m23:15:01.739833 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:15:01.753836 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:15:01.753836 [info ] [Thread-1 (]: 7 of 11 START test not_null_stg_fixtures_home_team_name ........................ [RUN]
+[0m23:15:01.753836 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d, now test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60)
+[0m23:15:01.759041 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:15:01.764770 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"
+[0m23:15:01.764770 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:15:01.772566 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"
+[0m23:15:01.772566 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:15:01.812760 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select home_team_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where home_team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:15:02.783570 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:5b99ef81-20ae-4faa-89c4-5b573a5b4d50&page=queryresults
+[0m23:15:03.383182 [warn ] [Thread-1 (]: 7 of 11 WARN 5 not_null_stg_fixtures_home_team_name ............................ [[33mWARN 5[0m in 1.63s]
+[0m23:15:03.383182 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:15:03.398976 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:15:03.402576 [info ] [Thread-1 (]: 8 of 11 START test not_null_stg_fixtures_league_code ........................... [RUN]
+[0m23:15:03.405755 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60, now test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929)
+[0m23:15:03.405755 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:15:03.405755 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"
+[0m23:15:03.420364 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:15:03.425396 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"
+[0m23:15:03.426362 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:15:03.456090 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_code
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where league_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:15:04.440627 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:7fe6f431-3bcb-4b24-ab99-c4865f6576c1&page=queryresults
+[0m23:15:04.936089 [info ] [Thread-1 (]: 8 of 11 PASS not_null_stg_fixtures_league_code ................................. [[32mPASS[0m in 1.53s]
+[0m23:15:04.936089 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:15:04.936089 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:15:04.936089 [info ] [Thread-1 (]: 9 of 11 START test not_null_stg_fixtures_league_name ........................... [RUN]
+[0m23:15:04.936089 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929, now test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a)
+[0m23:15:04.936089 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:15:04.962384 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"
+[0m23:15:04.964347 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:15:04.968380 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"
+[0m23:15:04.969348 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:15:05.007438 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where league_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:15:05.954323 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:c2cdc6d3-2202-4fd4-b5fb-fb23019d136c&page=queryresults
+[0m23:15:06.479342 [info ] [Thread-1 (]: 9 of 11 PASS not_null_stg_fixtures_league_name ................................. [[32mPASS[0m in 1.53s]
+[0m23:15:06.479342 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:15:06.479342 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:15:06.479342 [info ] [Thread-1 (]: 10 of 11 START test not_null_stg_fixtures_season ............................... [RUN]
+[0m23:15:06.479342 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a, now test.football_analytics.not_null_stg_fixtures_season.71047028c7)
+[0m23:15:06.498250 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:15:06.528113 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_season.71047028c7"
+[0m23:15:06.528113 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:15:06.544428 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_season.71047028c7"
+[0m23:15:06.546428 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:15:06.586199 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_season.71047028c7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_season.71047028c7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select season
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where season is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:15:07.568555 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:f3b0fb10-4f07-444b-88a3-bd874e293923&page=queryresults
+[0m23:15:08.151037 [info ] [Thread-1 (]: 10 of 11 PASS not_null_stg_fixtures_season ..................................... [[32mPASS[0m in 1.67s]
+[0m23:15:08.151037 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:15:08.151037 [debug] [Thread-1 (]: Began running node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:15:08.151037 [info ] [Thread-1 (]: 11 of 11 START test unique_stg_fixtures_fixture_id ............................. [RUN]
+[0m23:15:08.151037 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_season.71047028c7, now test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d)
+[0m23:15:08.161201 [debug] [Thread-1 (]: Began compiling node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:15:08.172266 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"
+[0m23:15:08.172266 [debug] [Thread-1 (]: Began executing node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:15:08.172266 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"
+[0m23:15:08.172266 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:15:08.216771 [debug] [Thread-1 (]: On test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select fixture_id as unique_field
+  from `football-analytics-492122`.`staging`.`stg_fixtures`
+  where fixture_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:15:09.454229 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:59fb3680-d8e1-4cee-882c-c619896d3f86&page=queryresults
+[0m23:15:09.938958 [info ] [Thread-1 (]: 11 of 11 PASS unique_stg_fixtures_fixture_id ................................... [[32mPASS[0m in 1.79s]
+[0m23:15:09.940964 [debug] [Thread-1 (]: Finished running node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:15:09.942973 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:15:09.943999 [debug] [MainThread]: Connection 'list_football-analytics-492122_staging' was properly closed.
+[0m23:15:09.944998 [debug] [MainThread]: Connection 'test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d' was properly closed.
+[0m23:15:09.944998 [info ] [MainThread]: 
+[0m23:15:09.945998 [info ] [MainThread]: Finished running 11 data tests in 0 hours 0 minutes and 17.90 seconds (17.90s).
+[0m23:15:09.950006 [debug] [MainThread]: Command end result
+[0m23:15:09.990494 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m23:15:09.990494 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m23:15:10.010985 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\run_results.json
+[0m23:15:10.011996 [info ] [MainThread]: 
+[0m23:15:10.013019 [info ] [MainThread]: [33mCompleted with 4 warnings:[0m
+[0m23:15:10.014058 [info ] [MainThread]: 
+[0m23:15:10.016063 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_away_team_id (dbt/models\staging\schema.yml)[0m
+[0m23:15:10.017059 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:15:10.018062 [info ] [MainThread]: 
+[0m23:15:10.019060 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_away_team_id.sql
+[0m23:15:10.020785 [info ] [MainThread]: 
+[0m23:15:10.021895 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_away_team_name (dbt/models\staging\schema.yml)[0m
+[0m23:15:10.023890 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:15:10.024906 [info ] [MainThread]: 
+[0m23:15:10.026565 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_away_team_name.sql
+[0m23:15:10.028688 [info ] [MainThread]: 
+[0m23:15:10.030621 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_home_team_id (dbt/models\staging\schema.yml)[0m
+[0m23:15:10.032489 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:15:10.032489 [info ] [MainThread]: 
+[0m23:15:10.034519 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_home_team_id.sql
+[0m23:15:10.035486 [info ] [MainThread]: 
+[0m23:15:10.036493 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_home_team_name (dbt/models\staging\schema.yml)[0m
+[0m23:15:10.037576 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:15:10.039595 [info ] [MainThread]: 
+[0m23:15:10.040599 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_home_team_name.sql
+[0m23:15:10.043643 [info ] [MainThread]: 
+[0m23:15:10.044752 [info ] [MainThread]: Done. PASS=7 WARN=4 ERROR=0 SKIP=0 NO-OP=0 TOTAL=11
+[0m23:15:10.044752 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigTargetPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m23:15:10.044752 [debug] [MainThread]: Command `dbt test` succeeded at 23:15:10.044752 after 20.75 seconds
+[0m23:15:10.044752 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76CDF04C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76DE30FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001C76E05C7F0>]}
+[0m23:15:10.044752 [debug] [MainThread]: Flushing usage events
+[0m23:15:10.631496 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:27:44.675625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA1F8F85B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA20BA4CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA20BA4AF0>]}
+
+
+============================== 23:27:44.675625 | fd2abac7-2b1f-45a9-85a3-a64eebeef288 ==============================
+[0m23:27:44.675625 [info ] [MainThread]: Running with dbt=1.11.7
+[0m23:27:44.675625 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\João\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt test --select stg_standings stg_top_scorers stg_fixtures', 'use_experimental_parser': 'False', 'log_path': 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\logs'}
+[0m23:27:46.230320 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m23:27:46.231328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'fd2abac7-2b1f-45a9-85a3-a64eebeef288', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA32067550>]}
+[0m23:27:46.397291 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fd2abac7-2b1f-45a9-85a3-a64eebeef288', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA1CBDACB0>]}
+[0m23:27:46.476722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fd2abac7-2b1f-45a9-85a3-a64eebeef288', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA20BA61D0>]}
+[0m23:27:46.476722 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m23:27:46.993947 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m23:27:47.217014 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:27:47.217014 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m23:27:47.217014 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:27:47.232893 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.football_analytics.marts
+- models.football_analytics.intermediate
+[0m23:27:47.306634 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fd2abac7-2b1f-45a9-85a3-a64eebeef288', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA33798130>]}
+[0m23:27:47.441286 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m23:27:47.446248 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m23:27:47.511963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fd2abac7-2b1f-45a9-85a3-a64eebeef288', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA337991E0>]}
+[0m23:27:47.514027 [info ] [MainThread]: Found 3 models, 35 data tests, 3 sources, 520 macros
+[0m23:27:47.515535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fd2abac7-2b1f-45a9-85a3-a64eebeef288', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA31F75210>]}
+[0m23:27:47.515535 [info ] [MainThread]: 
+[0m23:27:47.526385 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:27:47.527648 [info ] [MainThread]: 
+[0m23:27:47.531301 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m23:27:47.547113 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_football-analytics-492122_staging'
+[0m23:27:47.549115 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:27:48.127477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fd2abac7-2b1f-45a9-85a3-a64eebeef288', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA32066AD0>]}
+[0m23:27:48.128183 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:27:48.128183 [info ] [Thread-1 (]: 1 of 35 START test not_null_stg_fixtures_away_team_id .......................... [RUN]
+[0m23:27:48.128183 [debug] [Thread-1 (]: Acquiring new bigquery connection 'test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2'
+[0m23:27:48.128183 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:27:48.246132 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"
+[0m23:27:48.246132 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:27:48.262155 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"
+[0m23:27:48.262155 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m23:27:48.309862 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select away_team_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where away_team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:49.345216 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:4cdc81c7-0fa2-4812-a2f6-3d11c866e8cf&page=queryresults
+[0m23:27:49.906415 [warn ] [Thread-1 (]: 1 of 35 WARN 5 not_null_stg_fixtures_away_team_id .............................. [[33mWARN 5[0m in 1.78s]
+[0m23:27:49.906415 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2
+[0m23:27:49.906415 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:27:49.906415 [info ] [Thread-1 (]: 2 of 35 START test not_null_stg_fixtures_away_team_name ........................ [RUN]
+[0m23:27:49.906415 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_away_team_id.948f5675a2, now test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be)
+[0m23:27:49.906415 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:27:49.924624 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"
+[0m23:27:49.926491 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:27:49.931775 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"
+[0m23:27:49.931775 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:49.970866 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select away_team_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where away_team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:50.877450 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:38de3638-3c2e-43bc-ae3e-eb6ba8241a53&page=queryresults
+[0m23:27:51.428105 [warn ] [Thread-1 (]: 2 of 35 WARN 5 not_null_stg_fixtures_away_team_name ............................ [[33mWARN 5[0m in 1.52s]
+[0m23:27:51.434631 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be
+[0m23:27:51.436624 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:27:51.438861 [info ] [Thread-1 (]: 3 of 35 START test not_null_stg_fixtures_fixture_date .......................... [RUN]
+[0m23:27:51.442055 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_away_team_name.e88eedc0be, now test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403)
+[0m23:27:51.443053 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:27:51.455622 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"
+[0m23:27:51.455622 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:27:51.465641 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"
+[0m23:27:51.465641 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:51.508238 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_date
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:52.263255 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:b5c03921-6665-4ceb-ae61-90f275aae47f&page=queryresults
+[0m23:27:52.831400 [info ] [Thread-1 (]: 3 of 35 PASS not_null_stg_fixtures_fixture_date ................................ [[32mPASS[0m in 1.39s]
+[0m23:27:52.831400 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403
+[0m23:27:52.831400 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:27:52.831400 [info ] [Thread-1 (]: 4 of 35 START test not_null_stg_fixtures_fixture_id ............................ [RUN]
+[0m23:27:52.831400 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_date.7f4533a403, now test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc)
+[0m23:27:52.831400 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:27:52.848407 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"
+[0m23:27:52.849471 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:27:52.852447 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"
+[0m23:27:52.852447 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:52.880911 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:53.742988 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:c0a90fc6-b09b-4af6-85e8-98ad4d528048&page=queryresults
+[0m23:27:54.253111 [info ] [Thread-1 (]: 4 of 35 PASS not_null_stg_fixtures_fixture_id .................................. [[32mPASS[0m in 1.42s]
+[0m23:27:54.253111 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc
+[0m23:27:54.253111 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:27:54.253111 [info ] [Thread-1 (]: 5 of 35 START test not_null_stg_fixtures_fixture_status ........................ [RUN]
+[0m23:27:54.253111 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_id.21286cf0bc, now test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89)
+[0m23:27:54.253111 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:27:54.270146 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"
+[0m23:27:54.271547 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:27:54.275468 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"
+[0m23:27:54.275468 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:54.318190 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fixture_status
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where fixture_status is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:55.043970 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:c66da0cb-c604-4d91-80a4-a84d5f846709&page=queryresults
+[0m23:27:55.574662 [info ] [Thread-1 (]: 5 of 35 PASS not_null_stg_fixtures_fixture_status .............................. [[32mPASS[0m in 1.32s]
+[0m23:27:55.574662 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89
+[0m23:27:55.574662 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:27:55.574662 [info ] [Thread-1 (]: 6 of 35 START test not_null_stg_fixtures_home_team_id .......................... [RUN]
+[0m23:27:55.574662 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_fixture_status.2c6dfd7f89, now test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d)
+[0m23:27:55.574662 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:27:55.587503 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"
+[0m23:27:55.587503 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:27:55.594217 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"
+[0m23:27:55.597679 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:55.637497 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select home_team_id
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where home_team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:56.371267 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:25f5a3d1-c819-49a5-9a57-519c1b9032c4&page=queryresults
+[0m23:27:56.902647 [warn ] [Thread-1 (]: 6 of 35 WARN 5 not_null_stg_fixtures_home_team_id .............................. [[33mWARN 5[0m in 1.33s]
+[0m23:27:56.902647 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d
+[0m23:27:56.902647 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:27:56.902647 [info ] [Thread-1 (]: 7 of 35 START test not_null_stg_fixtures_home_team_name ........................ [RUN]
+[0m23:27:56.902647 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_home_team_id.f164f4d40d, now test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60)
+[0m23:27:56.902647 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:27:56.917655 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"
+[0m23:27:56.919617 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:27:56.924829 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"
+[0m23:27:56.924829 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:56.965707 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select home_team_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where home_team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:57.726461 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:a3f6324b-dce0-4036-a6b3-711d5901d2a4&page=queryresults
+[0m23:27:58.250015 [warn ] [Thread-1 (]: 7 of 35 WARN 5 not_null_stg_fixtures_home_team_name ............................ [[33mWARN 5[0m in 1.35s]
+[0m23:27:58.259983 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60
+[0m23:27:58.259983 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:27:58.259983 [info ] [Thread-1 (]: 8 of 35 START test not_null_stg_fixtures_league_code ........................... [RUN]
+[0m23:27:58.259983 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_home_team_name.da17d60b60, now test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929)
+[0m23:27:58.259983 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:27:58.259983 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"
+[0m23:27:58.259983 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:27:58.276063 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"
+[0m23:27:58.279416 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:58.319877 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_code
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where league_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:27:59.376181 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:d066d581-e499-4054-8979-657adc5124eb&page=queryresults
+[0m23:27:59.876412 [info ] [Thread-1 (]: 8 of 35 PASS not_null_stg_fixtures_league_code ................................. [[32mPASS[0m in 1.62s]
+[0m23:27:59.892183 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929
+[0m23:27:59.892183 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:27:59.892183 [info ] [Thread-1 (]: 9 of 35 START test not_null_stg_fixtures_league_name ........................... [RUN]
+[0m23:27:59.900320 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_league_code.d6de4dd929, now test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a)
+[0m23:27:59.901785 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:27:59.907295 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"
+[0m23:27:59.913624 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:27:59.915460 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"
+[0m23:27:59.915460 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:27:59.959998 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_name
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where league_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:00.879368 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:a89bfb24-85dc-402e-b412-388b75666f2d&page=queryresults
+[0m23:28:01.431542 [info ] [Thread-1 (]: 9 of 35 PASS not_null_stg_fixtures_league_name ................................. [[32mPASS[0m in 1.53s]
+[0m23:28:01.431542 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a
+[0m23:28:01.431542 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:28:01.437277 [info ] [Thread-1 (]: 10 of 35 START test not_null_stg_fixtures_season ............................... [RUN]
+[0m23:28:01.437277 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_league_name.81a5e9737a, now test.football_analytics.not_null_stg_fixtures_season.71047028c7)
+[0m23:28:01.437277 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:28:01.449011 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_fixtures_season.71047028c7"
+[0m23:28:01.451589 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:28:01.451589 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_fixtures_season.71047028c7"
+[0m23:28:01.451589 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:01.526856 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_fixtures_season.71047028c7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_fixtures_season.71047028c7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select season
+from `football-analytics-492122`.`staging`.`stg_fixtures`
+where season is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:02.218026 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:bdc35f5d-e141-43b1-a5d5-eae13e59b561&page=queryresults
+[0m23:28:02.741579 [info ] [Thread-1 (]: 10 of 35 PASS not_null_stg_fixtures_season ..................................... [[32mPASS[0m in 1.30s]
+[0m23:28:02.741579 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_fixtures_season.71047028c7
+[0m23:28:02.741579 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761
+[0m23:28:02.741579 [info ] [Thread-1 (]: 11 of 35 START test not_null_stg_standings_goal_difference ..................... [RUN]
+[0m23:28:02.741579 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_fixtures_season.71047028c7, now test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761)
+[0m23:28:02.741579 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761
+[0m23:28:02.757617 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761"
+[0m23:28:02.757617 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761
+[0m23:28:02.764866 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761"
+[0m23:28:02.769598 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:02.809011 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select goal_difference
+from `football-analytics-492122`.`staging`.`stg_standings`
+where goal_difference is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:03.865944 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:800e7f62-dd29-4dad-b35e-658164c04c31&page=queryresults
+[0m23:28:04.361813 [info ] [Thread-1 (]: 11 of 35 PASS not_null_stg_standings_goal_difference ........................... [[32mPASS[0m in 1.62s]
+[0m23:28:04.361813 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761
+[0m23:28:04.361813 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_goals_against.5c978af1be
+[0m23:28:04.371585 [info ] [Thread-1 (]: 12 of 35 START test not_null_stg_standings_goals_against ....................... [RUN]
+[0m23:28:04.378269 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_goal_difference.3e050b9761, now test.football_analytics.not_null_stg_standings_goals_against.5c978af1be)
+[0m23:28:04.380574 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_goals_against.5c978af1be
+[0m23:28:04.390245 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_goals_against.5c978af1be"
+[0m23:28:04.390245 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_goals_against.5c978af1be
+[0m23:28:04.397323 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_goals_against.5c978af1be"
+[0m23:28:04.397323 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:04.439753 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_goals_against.5c978af1be: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_goals_against.5c978af1be"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select goals_against
+from `football-analytics-492122`.`staging`.`stg_standings`
+where goals_against is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:05.544397 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:369c90cd-6a79-4130-a194-e0e68c0c8df6&page=queryresults
+[0m23:28:06.033471 [info ] [Thread-1 (]: 12 of 35 PASS not_null_stg_standings_goals_against ............................. [[32mPASS[0m in 1.66s]
+[0m23:28:06.047813 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_goals_against.5c978af1be
+[0m23:28:06.049840 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_goals_for.a4802882b7
+[0m23:28:06.049840 [info ] [Thread-1 (]: 13 of 35 START test not_null_stg_standings_goals_for ........................... [RUN]
+[0m23:28:06.052424 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_goals_against.5c978af1be, now test.football_analytics.not_null_stg_standings_goals_for.a4802882b7)
+[0m23:28:06.053458 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_goals_for.a4802882b7
+[0m23:28:06.065953 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_goals_for.a4802882b7"
+[0m23:28:06.068694 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_goals_for.a4802882b7
+[0m23:28:06.073796 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_goals_for.a4802882b7"
+[0m23:28:06.076037 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:06.111282 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_goals_for.a4802882b7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_goals_for.a4802882b7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select goals_for
+from `football-analytics-492122`.`staging`.`stg_standings`
+where goals_for is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:07.144841 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:4f40e790-87f0-4e34-9927-93feddfd948b&page=queryresults
+[0m23:28:07.677805 [info ] [Thread-1 (]: 13 of 35 PASS not_null_stg_standings_goals_for ................................. [[32mPASS[0m in 1.63s]
+[0m23:28:07.677805 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_goals_for.a4802882b7
+[0m23:28:07.677805 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe
+[0m23:28:07.677805 [info ] [Thread-1 (]: 14 of 35 START test not_null_stg_standings_league_code ......................... [RUN]
+[0m23:28:07.677805 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_goals_for.a4802882b7, now test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe)
+[0m23:28:07.677805 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe
+[0m23:28:07.700535 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe"
+[0m23:28:07.700535 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe
+[0m23:28:07.700535 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe"
+[0m23:28:07.700535 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:07.749621 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_code
+from `football-analytics-492122`.`staging`.`stg_standings`
+where league_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:08.712905 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:ec194340-2638-4209-af78-aa751745bbca&page=queryresults
+[0m23:28:09.180958 [info ] [Thread-1 (]: 14 of 35 PASS not_null_stg_standings_league_code ............................... [[32mPASS[0m in 1.50s]
+[0m23:28:09.180958 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe
+[0m23:28:09.180958 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_league_name.19a5b2d923
+[0m23:28:09.193136 [info ] [Thread-1 (]: 15 of 35 START test not_null_stg_standings_league_name ......................... [RUN]
+[0m23:28:09.193136 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_league_code.1bfe7fb4fe, now test.football_analytics.not_null_stg_standings_league_name.19a5b2d923)
+[0m23:28:09.193136 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_league_name.19a5b2d923
+[0m23:28:09.203541 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_league_name.19a5b2d923"
+[0m23:28:09.203541 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_league_name.19a5b2d923
+[0m23:28:09.214905 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_league_name.19a5b2d923"
+[0m23:28:09.214905 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:09.255108 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_league_name.19a5b2d923: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_league_name.19a5b2d923"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_name
+from `football-analytics-492122`.`staging`.`stg_standings`
+where league_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:10.060767 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:bfd86cb1-33b8-4d6d-b8bd-2dcfe954c4a9&page=queryresults
+[0m23:28:10.549037 [info ] [Thread-1 (]: 15 of 35 PASS not_null_stg_standings_league_name ............................... [[32mPASS[0m in 1.36s]
+[0m23:28:10.549037 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_league_name.19a5b2d923
+[0m23:28:10.558091 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_matches_draw.52336027d1
+[0m23:28:10.558091 [info ] [Thread-1 (]: 16 of 35 START test not_null_stg_standings_matches_draw ........................ [RUN]
+[0m23:28:10.558091 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_league_name.19a5b2d923, now test.football_analytics.not_null_stg_standings_matches_draw.52336027d1)
+[0m23:28:10.558091 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_matches_draw.52336027d1
+[0m23:28:10.558091 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_matches_draw.52336027d1"
+[0m23:28:10.558091 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_matches_draw.52336027d1
+[0m23:28:10.574252 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_matches_draw.52336027d1"
+[0m23:28:10.577160 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:10.614917 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_matches_draw.52336027d1: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_matches_draw.52336027d1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select matches_draw
+from `football-analytics-492122`.`staging`.`stg_standings`
+where matches_draw is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:11.493933 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:440fbc58-0019-4195-b0a9-26f068286f33&page=queryresults
+[0m23:28:11.988936 [info ] [Thread-1 (]: 16 of 35 PASS not_null_stg_standings_matches_draw .............................. [[32mPASS[0m in 1.43s]
+[0m23:28:12.003182 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_matches_draw.52336027d1
+[0m23:28:12.004933 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_matches_lost.531a540de4
+[0m23:28:12.005537 [info ] [Thread-1 (]: 17 of 35 START test not_null_stg_standings_matches_lost ........................ [RUN]
+[0m23:28:12.005537 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_matches_draw.52336027d1, now test.football_analytics.not_null_stg_standings_matches_lost.531a540de4)
+[0m23:28:12.008352 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_matches_lost.531a540de4
+[0m23:28:12.023688 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_matches_lost.531a540de4"
+[0m23:28:12.023688 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_matches_lost.531a540de4
+[0m23:28:12.034255 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_matches_lost.531a540de4"
+[0m23:28:12.034255 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:12.073520 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_matches_lost.531a540de4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_matches_lost.531a540de4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select matches_lost
+from `football-analytics-492122`.`staging`.`stg_standings`
+where matches_lost is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:13.093840 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:c915503b-f5ee-4f3b-b0b5-ebe94871a869&page=queryresults
+[0m23:28:13.641687 [info ] [Thread-1 (]: 17 of 35 PASS not_null_stg_standings_matches_lost .............................. [[32mPASS[0m in 1.64s]
+[0m23:28:13.643703 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_matches_lost.531a540de4
+[0m23:28:13.643703 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3
+[0m23:28:13.643703 [info ] [Thread-1 (]: 18 of 35 START test not_null_stg_standings_matches_played ...................... [RUN]
+[0m23:28:13.643703 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_matches_lost.531a540de4, now test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3)
+[0m23:28:13.643703 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3
+[0m23:28:13.650954 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3"
+[0m23:28:13.659392 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3
+[0m23:28:13.666320 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3"
+[0m23:28:13.666320 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:13.705061 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select matches_played
+from `football-analytics-492122`.`staging`.`stg_standings`
+where matches_played is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:14.513380 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:b7617a6f-477e-4fa5-93cb-8ca36bfc8f85&page=queryresults
+[0m23:28:15.007071 [info ] [Thread-1 (]: 18 of 35 PASS not_null_stg_standings_matches_played ............................ [[32mPASS[0m in 1.36s]
+[0m23:28:15.008080 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3
+[0m23:28:15.009079 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad
+[0m23:28:15.010078 [info ] [Thread-1 (]: 19 of 35 START test not_null_stg_standings_matches_won ......................... [RUN]
+[0m23:28:15.010915 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_matches_played.869de0ffd3, now test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad)
+[0m23:28:15.010915 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad
+[0m23:28:15.019697 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad"
+[0m23:28:15.019697 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad
+[0m23:28:15.019697 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad"
+[0m23:28:15.019697 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:15.065601 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select matches_won
+from `football-analytics-492122`.`staging`.`stg_standings`
+where matches_won is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:16.023751 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:5f8bdc4b-4a93-406c-846d-e68c769f815f&page=queryresults
+[0m23:28:16.613936 [info ] [Thread-1 (]: 19 of 35 PASS not_null_stg_standings_matches_won ............................... [[32mPASS[0m in 1.60s]
+[0m23:28:16.613936 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad
+[0m23:28:16.613936 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_points.3d7532239f
+[0m23:28:16.617997 [info ] [Thread-1 (]: 20 of 35 START test not_null_stg_standings_points .............................. [RUN]
+[0m23:28:16.619011 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_matches_won.3dd74b40ad, now test.football_analytics.not_null_stg_standings_points.3d7532239f)
+[0m23:28:16.619011 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_points.3d7532239f
+[0m23:28:16.619011 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_points.3d7532239f"
+[0m23:28:16.619011 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_points.3d7532239f
+[0m23:28:16.632380 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_points.3d7532239f"
+[0m23:28:16.635596 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:16.671988 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_points.3d7532239f: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_points.3d7532239f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select points
+from `football-analytics-492122`.`staging`.`stg_standings`
+where points is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:17.637641 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:cd37b36e-7464-45d8-8755-491cb5caa1d8&page=queryresults
+[0m23:28:18.121308 [info ] [Thread-1 (]: 20 of 35 PASS not_null_stg_standings_points .................................... [[32mPASS[0m in 1.50s]
+[0m23:28:18.121308 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_points.3d7532239f
+[0m23:28:18.121308 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_position.08aad705c5
+[0m23:28:18.121308 [info ] [Thread-1 (]: 21 of 35 START test not_null_stg_standings_position ............................ [RUN]
+[0m23:28:18.121308 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_points.3d7532239f, now test.football_analytics.not_null_stg_standings_position.08aad705c5)
+[0m23:28:18.134361 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_position.08aad705c5
+[0m23:28:18.139491 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_position.08aad705c5"
+[0m23:28:18.139491 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_position.08aad705c5
+[0m23:28:18.148332 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_position.08aad705c5"
+[0m23:28:18.148332 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:18.189215 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_position.08aad705c5: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_position.08aad705c5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select position
+from `football-analytics-492122`.`staging`.`stg_standings`
+where position is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:19.028694 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:62abf519-169a-4ab0-8632-81559284a4f2&page=queryresults
+[0m23:28:19.549619 [info ] [Thread-1 (]: 21 of 35 PASS not_null_stg_standings_position .................................. [[32mPASS[0m in 1.43s]
+[0m23:28:19.555575 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_position.08aad705c5
+[0m23:28:19.555575 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_season.b794e311b5
+[0m23:28:19.555575 [info ] [Thread-1 (]: 22 of 35 START test not_null_stg_standings_season .............................. [RUN]
+[0m23:28:19.555575 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_position.08aad705c5, now test.football_analytics.not_null_stg_standings_season.b794e311b5)
+[0m23:28:19.561496 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_season.b794e311b5
+[0m23:28:19.567309 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_season.b794e311b5"
+[0m23:28:19.567309 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_season.b794e311b5
+[0m23:28:19.567309 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_season.b794e311b5"
+[0m23:28:19.582584 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:19.617897 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_season.b794e311b5: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_season.b794e311b5"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select season
+from `football-analytics-492122`.`staging`.`stg_standings`
+where season is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:20.720488 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:b99590bf-70ec-4aa8-b097-98bbaf9175e3&page=queryresults
+[0m23:28:21.190460 [info ] [Thread-1 (]: 22 of 35 PASS not_null_stg_standings_season .................................... [[32mPASS[0m in 1.63s]
+[0m23:28:21.206560 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_season.b794e311b5
+[0m23:28:21.206560 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_team_id.088c28479a
+[0m23:28:21.206560 [info ] [Thread-1 (]: 23 of 35 START test not_null_stg_standings_team_id ............................. [RUN]
+[0m23:28:21.206560 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_season.b794e311b5, now test.football_analytics.not_null_stg_standings_team_id.088c28479a)
+[0m23:28:21.206560 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_team_id.088c28479a
+[0m23:28:21.206560 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_team_id.088c28479a"
+[0m23:28:21.217187 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_team_id.088c28479a
+[0m23:28:21.217187 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_team_id.088c28479a"
+[0m23:28:21.223822 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:21.261353 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_team_id.088c28479a: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_team_id.088c28479a"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select team_id
+from `football-analytics-492122`.`staging`.`stg_standings`
+where team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:22.335090 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:752f0ec1-ec5f-4b75-98a9-17bec855a29d&page=queryresults
+[0m23:28:22.872184 [info ] [Thread-1 (]: 23 of 35 PASS not_null_stg_standings_team_id ................................... [[32mPASS[0m in 1.67s]
+[0m23:28:22.874186 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_team_id.088c28479a
+[0m23:28:22.876154 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0
+[0m23:28:22.877197 [info ] [Thread-1 (]: 24 of 35 START test not_null_stg_standings_team_name ........................... [RUN]
+[0m23:28:22.879209 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_team_id.088c28479a, now test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0)
+[0m23:28:22.881584 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0
+[0m23:28:22.886346 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0"
+[0m23:28:22.886346 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0
+[0m23:28:22.896699 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0"
+[0m23:28:22.898092 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:22.935654 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select team_name
+from `football-analytics-492122`.`staging`.`stg_standings`
+where team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:23.823239 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:7ef5754b-2aba-4bfa-8adb-3e2ce845d437&page=queryresults
+[0m23:28:24.292995 [info ] [Thread-1 (]: 24 of 35 PASS not_null_stg_standings_team_name ................................. [[32mPASS[0m in 1.41s]
+[0m23:28:24.292995 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0
+[0m23:28:24.299122 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d
+[0m23:28:24.299122 [info ] [Thread-1 (]: 25 of 35 START test not_null_stg_top_scorers_league_code ....................... [RUN]
+[0m23:28:24.299122 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_standings_team_name.ac34ea05e0, now test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d)
+[0m23:28:24.299122 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d
+[0m23:28:24.311861 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d"
+[0m23:28:24.314347 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d
+[0m23:28:24.315224 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d"
+[0m23:28:24.315224 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:24.362992 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_code
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where league_code is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:25.226951 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:1261b8bd-cdbc-4294-82a8-afd9d0fc98c3&page=queryresults
+[0m23:28:25.744198 [info ] [Thread-1 (]: 25 of 35 PASS not_null_stg_top_scorers_league_code ............................. [[32mPASS[0m in 1.44s]
+[0m23:28:25.744198 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d
+[0m23:28:25.744198 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc
+[0m23:28:25.744198 [info ] [Thread-1 (]: 26 of 35 START test not_null_stg_top_scorers_league_name ....................... [RUN]
+[0m23:28:25.744198 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_league_code.74f96c719d, now test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc)
+[0m23:28:25.744198 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc
+[0m23:28:25.744198 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc"
+[0m23:28:25.744198 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc
+[0m23:28:25.761773 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc"
+[0m23:28:25.764520 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:25.802400 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select league_name
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where league_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:26.842237 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:4c5f08d2-4aae-4b65-ae65-cf0accde567c&page=queryresults
+[0m23:28:27.280277 [info ] [Thread-1 (]: 26 of 35 PASS not_null_stg_top_scorers_league_name ............................. [[32mPASS[0m in 1.54s]
+[0m23:28:27.284298 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc
+[0m23:28:27.286310 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c
+[0m23:28:27.286310 [info ] [Thread-1 (]: 27 of 35 START test not_null_stg_top_scorers_player_id ......................... [RUN]
+[0m23:28:27.288321 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_league_name.66a31dc0fc, now test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c)
+[0m23:28:27.291185 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c
+[0m23:28:27.309599 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c"
+[0m23:28:27.312116 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c
+[0m23:28:27.320853 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c"
+[0m23:28:27.323855 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:27.394544 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select player_id
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where player_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:28.421651 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:f6e548b0-459a-4ad6-a08d-77b3331ee8d1&page=queryresults
+[0m23:28:28.945323 [info ] [Thread-1 (]: 27 of 35 PASS not_null_stg_top_scorers_player_id ............................... [[32mPASS[0m in 1.65s]
+[0m23:28:28.947331 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c
+[0m23:28:28.949343 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c
+[0m23:28:28.949343 [info ] [Thread-1 (]: 28 of 35 START test not_null_stg_top_scorers_player_name ....................... [RUN]
+[0m23:28:28.951350 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_player_id.cecf56fa0c, now test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c)
+[0m23:28:28.952904 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c
+[0m23:28:28.980951 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c"
+[0m23:28:28.986954 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c
+[0m23:28:28.992950 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c"
+[0m23:28:28.996839 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:29.049632 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select player_name
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where player_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:29.863818 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:f6bc2178-9e81-4496-8d54-702959f0ef09&page=queryresults
+[0m23:28:30.318272 [info ] [Thread-1 (]: 28 of 35 PASS not_null_stg_top_scorers_player_name ............................. [[32mPASS[0m in 1.37s]
+[0m23:28:30.325465 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c
+[0m23:28:30.325465 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_season.7e1136328f
+[0m23:28:30.325465 [info ] [Thread-1 (]: 29 of 35 START test not_null_stg_top_scorers_season ............................ [RUN]
+[0m23:28:30.325465 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_player_name.1b8646024c, now test.football_analytics.not_null_stg_top_scorers_season.7e1136328f)
+[0m23:28:30.325465 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_season.7e1136328f
+[0m23:28:30.325465 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_season.7e1136328f"
+[0m23:28:30.325465 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_season.7e1136328f
+[0m23:28:30.325465 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_season.7e1136328f"
+[0m23:28:30.342831 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:30.388147 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_season.7e1136328f: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_season.7e1136328f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select season
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where season is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:31.167863 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:7a3745c0-7795-4522-a50b-54b8c2a23c0a&page=queryresults
+[0m23:28:31.713404 [info ] [Thread-1 (]: 29 of 35 PASS not_null_stg_top_scorers_season .................................. [[32mPASS[0m in 1.39s]
+[0m23:28:31.713404 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_season.7e1136328f
+[0m23:28:31.713404 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4
+[0m23:28:31.724109 [info ] [Thread-1 (]: 30 of 35 START test not_null_stg_top_scorers_team_id ........................... [RUN]
+[0m23:28:31.726899 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_season.7e1136328f, now test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4)
+[0m23:28:31.728590 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4
+[0m23:28:31.731850 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4"
+[0m23:28:31.731850 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4
+[0m23:28:31.731850 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4"
+[0m23:28:31.747621 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:31.786945 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select team_id
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where team_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:32.648378 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:dfa805d4-637f-41e8-b9f4-99f928aa229a&page=queryresults
+[0m23:28:33.159839 [info ] [Thread-1 (]: 30 of 35 PASS not_null_stg_top_scorers_team_id ................................. [[32mPASS[0m in 1.43s]
+[0m23:28:33.166543 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4
+[0m23:28:33.166543 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2
+[0m23:28:33.166543 [info ] [Thread-1 (]: 31 of 35 START test not_null_stg_top_scorers_team_name ......................... [RUN]
+[0m23:28:33.166543 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_team_id.994e9fe4c4, now test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2)
+[0m23:28:33.174637 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2
+[0m23:28:33.181739 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2"
+[0m23:28:33.181739 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2
+[0m23:28:33.181739 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2"
+[0m23:28:33.181739 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:33.233397 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select team_name
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where team_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:33.910101 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:c56b3c37-d270-4aa7-9a37-3e69ae3f445d&page=queryresults
+[0m23:28:34.392933 [info ] [Thread-1 (]: 31 of 35 PASS not_null_stg_top_scorers_team_name ............................... [[32mPASS[0m in 1.23s]
+[0m23:28:34.392933 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2
+[0m23:28:34.408739 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf
+[0m23:28:34.408739 [info ] [Thread-1 (]: 32 of 35 START test not_null_stg_top_scorers_total_assists ..................... [RUN]
+[0m23:28:34.408739 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_team_name.5e659756e2, now test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf)
+[0m23:28:34.412579 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf
+[0m23:28:34.419627 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf"
+[0m23:28:34.424596 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf
+[0m23:28:34.427629 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf"
+[0m23:28:34.429588 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:34.467326 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_assists
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where total_assists is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:35.408529 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:1c8f9eb0-3e44-4b4b-aa57-baedcb497278&page=queryresults
+[0m23:28:35.882534 [warn ] [Thread-1 (]: 32 of 35 WARN 7 not_null_stg_top_scorers_total_assists ......................... [[33mWARN 7[0m in 1.47s]
+[0m23:28:35.882534 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf
+[0m23:28:35.882534 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7
+[0m23:28:35.882534 [info ] [Thread-1 (]: 33 of 35 START test not_null_stg_top_scorers_total_goals ....................... [RUN]
+[0m23:28:35.882534 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_total_assists.e997ff23bf, now test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7)
+[0m23:28:35.892863 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7
+[0m23:28:35.898595 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7"
+[0m23:28:35.898595 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7
+[0m23:28:35.913235 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7"
+[0m23:28:35.915266 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:35.947678 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_goals
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where total_goals is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:36.942707 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:b9999610-e6a0-41d7-ad1b-3ad32561d72b&page=queryresults
+[0m23:28:37.444451 [info ] [Thread-1 (]: 33 of 35 PASS not_null_stg_top_scorers_total_goals ............................. [[32mPASS[0m in 1.56s]
+[0m23:28:37.460112 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7
+[0m23:28:37.460112 [debug] [Thread-1 (]: Began running node test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28
+[0m23:28:37.460112 [info ] [Thread-1 (]: 34 of 35 START test not_null_stg_top_scorers_total_penalties ................... [RUN]
+[0m23:28:37.460112 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_total_goals.c319c3a1d7, now test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28)
+[0m23:28:37.467531 [debug] [Thread-1 (]: Began compiling node test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28
+[0m23:28:37.473020 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28"
+[0m23:28:37.479844 [debug] [Thread-1 (]: Began executing node test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28
+[0m23:28:37.480854 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28"
+[0m23:28:37.480854 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:37.521764 [debug] [Thread-1 (]: On test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select total_penalties
+from `football-analytics-492122`.`staging`.`stg_top_scorers`
+where total_penalties is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:38.130470 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:fe9136f4-0d06-4492-af06-77c613300252&page=queryresults
+[0m23:28:38.624890 [warn ] [Thread-1 (]: 34 of 35 WARN 9 not_null_stg_top_scorers_total_penalties ....................... [[33mWARN 9[0m in 1.16s]
+[0m23:28:38.624890 [debug] [Thread-1 (]: Finished running node test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28
+[0m23:28:38.624890 [debug] [Thread-1 (]: Began running node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:28:38.640780 [info ] [Thread-1 (]: 35 of 35 START test unique_stg_fixtures_fixture_id ............................. [RUN]
+[0m23:28:38.640780 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.football_analytics.not_null_stg_top_scorers_total_penalties.0f880bba28, now test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d)
+[0m23:28:38.640780 [debug] [Thread-1 (]: Began compiling node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:28:38.640780 [debug] [Thread-1 (]: Writing injected SQL for node "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"
+[0m23:28:38.640780 [debug] [Thread-1 (]: Began executing node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:28:38.640780 [debug] [Thread-1 (]: Writing runtime sql for node "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"
+[0m23:28:38.658329 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:28:38.696843 [debug] [Thread-1 (]: On test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "football_analytics", "target_name": "dev", "node_id": "test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select fixture_id as unique_field
+  from `football-analytics-492122`.`staging`.`stg_fixtures`
+  where fixture_id is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m23:28:39.675843 [debug] [Thread-1 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=football-analytics-492122&j=bq:EU:2e72361a-058e-4a5a-af74-c22ebd9f0fae&page=queryresults
+[0m23:28:40.159490 [info ] [Thread-1 (]: 35 of 35 PASS unique_stg_fixtures_fixture_id ................................... [[32mPASS[0m in 1.52s]
+[0m23:28:40.162577 [debug] [Thread-1 (]: Finished running node test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d
+[0m23:28:40.162577 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:28:40.162577 [debug] [MainThread]: Connection 'list_football-analytics-492122_staging' was properly closed.
+[0m23:28:40.162577 [debug] [MainThread]: Connection 'test.football_analytics.unique_stg_fixtures_fixture_id.6ec415370d' was properly closed.
+[0m23:28:40.162577 [info ] [MainThread]: 
+[0m23:28:40.162577 [info ] [MainThread]: Finished running 35 data tests in 0 hours 0 minutes and 52.63 seconds (52.63s).
+[0m23:28:40.174925 [debug] [MainThread]: Command end result
+[0m23:28:40.215101 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\manifest.json
+[0m23:28:40.232851 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\semantic_manifest.json
+[0m23:28:40.246709 [debug] [MainThread]: Wrote artifact RunExecutionResult to C:\Users\João\Desktop\Data-Portfolio\football-analytics\dbt/target\run_results.json
+[0m23:28:40.247776 [info ] [MainThread]: 
+[0m23:28:40.248788 [info ] [MainThread]: [33mCompleted with 6 warnings:[0m
+[0m23:28:40.249776 [info ] [MainThread]: 
+[0m23:28:40.251774 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_away_team_id (dbt/models\staging\schema.yml)[0m
+[0m23:28:40.252775 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:28:40.253775 [info ] [MainThread]: 
+[0m23:28:40.254525 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_away_team_id.sql
+[0m23:28:40.255623 [info ] [MainThread]: 
+[0m23:28:40.256623 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_away_team_name (dbt/models\staging\schema.yml)[0m
+[0m23:28:40.258625 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:28:40.258625 [info ] [MainThread]: 
+[0m23:28:40.260631 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_away_team_name.sql
+[0m23:28:40.261628 [info ] [MainThread]: 
+[0m23:28:40.263263 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_home_team_id (dbt/models\staging\schema.yml)[0m
+[0m23:28:40.265383 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:28:40.266062 [info ] [MainThread]: 
+[0m23:28:40.269624 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_home_team_id.sql
+[0m23:28:40.270640 [info ] [MainThread]: 
+[0m23:28:40.272653 [warn ] [MainThread]: [33mWarning in test not_null_stg_fixtures_home_team_name (dbt/models\staging\schema.yml)[0m
+[0m23:28:40.274611 [warn ] [MainThread]: Got 5 results, configured to warn if != 0
+[0m23:28:40.275603 [info ] [MainThread]: 
+[0m23:28:40.276603 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_fixtures_home_team_name.sql
+[0m23:28:40.277603 [info ] [MainThread]: 
+[0m23:28:40.278603 [warn ] [MainThread]: [33mWarning in test not_null_stg_top_scorers_total_assists (dbt/models\staging\schema.yml)[0m
+[0m23:28:40.280523 [warn ] [MainThread]: Got 7 results, configured to warn if != 0
+[0m23:28:40.281512 [info ] [MainThread]: 
+[0m23:28:40.284587 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_top_scorers_total_assists.sql
+[0m23:28:40.286645 [info ] [MainThread]: 
+[0m23:28:40.288039 [warn ] [MainThread]: [33mWarning in test not_null_stg_top_scorers_total_penalties (dbt/models\staging\schema.yml)[0m
+[0m23:28:40.289048 [warn ] [MainThread]: Got 9 results, configured to warn if != 0
+[0m23:28:40.290176 [info ] [MainThread]: 
+[0m23:28:40.290974 [info ] [MainThread]:   compiled code at dbt/target\compiled\football_analytics\dbt/models\staging\schema.yml\not_null_stg_top_scorers_total_penalties.sql
+[0m23:28:40.290974 [info ] [MainThread]: 
+[0m23:28:40.290974 [info ] [MainThread]: Done. PASS=29 WARN=6 ERROR=0 SKIP=0 NO-OP=0 TOTAL=35
+[0m23:28:40.290974 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ConfigTargetPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m23:28:40.296487 [debug] [MainThread]: Command `dbt test` succeeded at 23:28:40.296487 after 55.72 seconds
+[0m23:28:40.297543 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA1F8F85B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA1FB9CB80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DA20BA61D0>]}
+[0m23:28:40.298504 [debug] [MainThread]: Flushing usage events
+[0m23:28:40.968539 [debug] [MainThread]: An error was encountered while trying to flush usage events
