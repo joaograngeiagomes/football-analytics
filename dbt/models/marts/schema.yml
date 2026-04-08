@@ -1,0 +1,388 @@
+version: 2
+
+models:
+  - name: mart_team_performance
+    description: "Team performance mart combining standings, home/away stats and form for the current season. Useful for betting analysis."
+    columns:
+      - name: team_id
+        description: "Unique identifier for the team"
+        tests:
+          - not_null
+
+      - name: team_name
+        description: "Name of the team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: points
+        description: "Total points in the standings"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: position
+        description: "Current position in the standings"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: matches_played
+        description: "Total matches played"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_wins
+        description: "Number of home wins"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_draws
+        description: "Number of home draws"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_losses
+        description: "Number of home losses"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_wins
+        description: "Number of away wins"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_draws
+        description: "Number of away draws"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_losses
+        description: "Number of away losses"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_home_goals_scored
+        description: "Total goals scored at home"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_home_goals_conceded
+        description: "Total goals conceded at home"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_away_goals_scored
+        description: "Total goals scored away"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_away_goals_conceded
+        description: "Total goals conceded away"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_goals_scored
+        description: "Total goals scored across all matches"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_goals_conceded
+        description: "Total goals conceded across all matches"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: goals_scored_per_match
+        description: "Average goals scored per match"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: goals_conceded_per_match
+        description: "Average goals conceded per match"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_wins
+        description: "Total wins across all matches"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_draws
+        description: "Total draws across all matches"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_losses
+        description: "Total losses across all matches"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: avg_total_goals_per_match
+        description: "Average total goals per match (scored + conceded). Useful for over/under betting."
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_win_rate
+        description: "Percentage of home matches won"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_win_rate
+        description: "Percentage of away matches won"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_form
+        description: "Last 5 matches form (e.g. WWDLW)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_form_home
+        description: "Last 5 home matches form"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_form_away
+        description: "Last 5 away matches form"
+        tests:
+          - not_null:
+              severity: warn
+
+  - name: mart_player_performance
+    description: "Player performance mart combining top scorers with team standings. Useful for fantasy league analysis."
+    columns:
+      - name: league_code
+        description: "League code (e.g. PL, PD, CL, PPL)"
+        tests:
+          - not_null
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: player_name
+        description: "Full name of the player"
+        tests:
+          - not_null
+
+      - name: team_name
+        description: "Name of the player's team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_player_goals
+        description: "Total goals scored by the player"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_player_assists
+        description: "Total assists by the player"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: total_player_penalties
+        description: "Total penalties scored by the player"
+
+      - name: matches_played
+        description: "Total matches played by the player's team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_points
+        description: "Total points of the player's team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_goals_scored
+        description: "Total goals scored by the player's team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_goals_conceded
+        description: "Total goals conceded by the player's team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: team_goal_difference
+        description: "Goal difference of the player's team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: percentage_player_contribution
+        description: "Percentage of team goals the player contributed to (goals + assists)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: open_play_goals
+        description: "Goals scored from open play (excluding penalties)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: goals_per_match
+        description: "Goals scored per match played"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: assists_per_match
+        description: "Assists per match played"
+
+      - name: goal_contributions_per_match
+        description: "Goals and assists combined per match played"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: penalty_dependency_ratio
+        description: "Percentage of goals scored from penalties"
+
+  - name: mart_fixtures
+    description: "Upcoming fixtures mart with team context for betting analysis"
+    columns:
+      - name: fixture_id
+        description: "Unique identifier for the fixture"
+        tests:
+          - not_null
+          - unique
+
+      - name: fixture_date
+        description: "Date of the fixture"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: matchday
+        description: "Matchday number"
+
+      - name: fixture_status
+        description: "Status of the fixture (TIMED or SCHEDULED)"
+        tests:
+          - not_null:
+              severity: warn
+          - accepted_values:
+              values: ['TIMED', 'SCHEDULED']
+
+      - name: home_team_id
+        description: "Unique identifier for the home team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_team_name
+        description: "Name of the home team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_team_position
+        description: "Current league position of the home team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_team_points
+        description: "Current points of the home team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_team_form_home
+        description: "Last 5 home matches form of the home team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_team_id
+        description: "Unique identifier for the away team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_team_name
+        description: "Name of the away team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_team_position
+        description: "Current league position of the away team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_team_points
+        description: "Current points of the away team"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_team_form_away
+        description: "Last 5 away matches form of the away team"
+        tests:
+          - not_null:
+              severity: warn

@@ -1,0 +1,142 @@
+version: 2
+
+models:
+  - name: int_team_home_stats
+    description: "Aggregated home statistics per team and league for finished matches"
+    columns:
+      - name: home_team_id
+        description: "Unique identifier for the home team"
+        tests:
+          - not_null
+
+      - name: league_code
+        description: "League code (e.g. PL, PD, CL, PPL)"
+        tests:
+          - not_null
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year (e.g. 2025)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_wins
+        description: "Number of home wins"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_draws
+        description: "Number of home draws"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_losses
+        description: "Number of home losses"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_goals_scored
+        description: "Total goals scored at home"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: home_goals_conceded
+        description: "Total goals conceded at home"
+        tests:
+          - not_null:
+              severity: warn
+
+  - name: int_team_away_stats
+    description: "Aggregated away statistics per team and league for finished matches"
+    columns:
+      - name: away_team_id
+        description: "Unique identifier for the away team"
+        tests:
+          - not_null
+
+      - name: league_code
+        description: "League code (e.g. PL, PD, CL, PPL)"
+        tests:
+          - not_null
+
+      - name: league_name
+        description: "Full name of the league"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: season
+        description: "Season year (e.g. 2025)"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_wins
+        description: "Number of away wins"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_draws
+        description: "Number of away draws"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_losses
+        description: "Number of away losses"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_goals_scored
+        description: "Total goals scored away"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: away_goals_conceded
+        description: "Total goals conceded away"
+        tests:
+          - not_null:
+              severity: warn
+
+  - name: int_team_last_5_matches
+    description: "Last 5 matches per team split by home and away for form calculation"
+    columns:
+      - name: team_id
+        description: "Unique identifier for the team"
+        tests:
+          - not_null
+
+      - name: fixture_date
+        description: "Date of the match"
+        tests:
+          - not_null:
+              severity: warn
+
+      - name: match_result
+        description: "Result of the match from the team perspective (W, D, L)"
+        tests:
+          - not_null:
+              severity: warn
+          - accepted_values:
+              values: ['W', 'D', 'L']
+
+      - name: is_home
+        description: "Flag indicating if the team played at home (1) or away (0)"
+        tests: 
+          - not_null
+          - accepted_values:
+              values: ['0', '1']
+              quote: false
