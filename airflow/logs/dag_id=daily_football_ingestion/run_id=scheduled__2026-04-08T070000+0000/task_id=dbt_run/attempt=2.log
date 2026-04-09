@@ -1,0 +1,94 @@
+[2026-04-09T21:39:46.732+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.dbt_run scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:39:46.741+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.dbt_run scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:39:46.742+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-09T21:39:46.759+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-08 07:00:00+00:00
+[2026-04-09T21:39:46.766+0000] {standard_task_runner.py:60} INFO - Started process 305 to run task
+[2026-04-09T21:39:46.770+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'dbt_run', 'scheduled__2026-04-08T07:00:00+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmp8s0dff40']
+[2026-04-09T21:39:46.774+0000] {standard_task_runner.py:88} INFO - Job 6: Subtask dbt_run
+[2026-04-09T21:39:46.860+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.dbt_run scheduled__2026-04-08T07:00:00+00:00 [running]> on host 65c8b2919894
+[2026-04-09T21:39:46.955+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T07:00:00+00:00'
+[2026-04-09T21:39:46.958+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-09T21:39:46.960+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/*** && dbt run --profiles-dir /opt/***/dbt']
+[2026-04-09T21:39:46.973+0000] {subprocess.py:86} INFO - Output:
+[2026-04-09T21:39:48.503+0000] {subprocess.py:93} INFO - [0m21:39:48  Running with dbt=1.8.7
+[2026-04-09T21:39:50.572+0000] {subprocess.py:93} INFO - [0m21:39:50  [[33mWARNING[0m]: Deprecated functionality
+[2026-04-09T21:39:50.574+0000] {subprocess.py:93} INFO - The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+[2026-04-09T21:39:50.580+0000] {subprocess.py:93} INFO - longer be supported in a future version of dbt-core. If you wish to write dbt
+[2026-04-09T21:39:50.584+0000] {subprocess.py:93} INFO - artifacts to a custom directory, please use the --target-path CLI flag or
+[2026-04-09T21:39:50.591+0000] {subprocess.py:93} INFO - DBT_TARGET_PATH env var instead.
+[2026-04-09T21:39:51.336+0000] {subprocess.py:93} INFO - [0m21:39:51  Registered adapter: bigquery=1.8.2
+[2026-04-09T21:39:51.748+0000] {subprocess.py:93} INFO - [0m21:39:51  Unable to do partial parsing because of a version mismatch
+[2026-04-09T21:39:53.788+0000] {subprocess.py:93} INFO - [0m21:39:53  [[33mWARNING[0m]: Deprecated functionality
+[2026-04-09T21:39:53.789+0000] {subprocess.py:93} INFO - The `tests` config has been renamed to `data_tests`. Please see
+[2026-04-09T21:39:53.790+0000] {subprocess.py:93} INFO - https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+[2026-04-09T21:39:53.790+0000] {subprocess.py:93} INFO - information.
+[2026-04-09T21:39:54.999+0000] {subprocess.py:93} INFO - [0m21:39:54  Found 9 models, 122 data tests, 3 sources, 480 macros
+[2026-04-09T21:39:55.005+0000] {subprocess.py:93} INFO - [0m21:39:55
+[2026-04-09T21:39:55.027+0000] {subprocess.py:93} INFO - [0m21:39:55
+[2026-04-09T21:39:55.028+0000] {subprocess.py:93} INFO - [0m21:39:55  Finished running  in 0 hours 0 minutes and 0.02 seconds (0.02s).
+[2026-04-09T21:39:55.030+0000] {subprocess.py:93} INFO - [0m21:39:55  Encountered an error:
+[2026-04-09T21:39:55.032+0000] {subprocess.py:93} INFO - Database Error
+[2026-04-09T21:39:55.032+0000] {subprocess.py:93} INFO -   [Errno 2] No such file or directory: 'C:\\Users\\João\\Desktop\\Data-Portfolio\\football-analytics\\credentials.json'
+[2026-04-09T21:39:56.202+0000] {subprocess.py:97} INFO - Command exited with return code 2
+[2026-04-09T21:39:56.218+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/bash.py", line 212, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 2.
+[2026-04-09T21:39:56.222+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=daily_football_ingestion, task_id=dbt_run, execution_date=20260408T070000, start_date=20260409T213946, end_date=20260409T213956
+[2026-04-09T21:39:56.242+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 6 for task dbt_run (Bash command failed. The command returned a non-zero exit code 2.; 305)
+[2026-04-09T21:39:56.290+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-09T21:39:56.314+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T21:47:30.708+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.dbt_run scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:47:30.718+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.dbt_run scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:47:30.719+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-09T21:47:30.737+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): dbt_run> on 2026-04-08 07:00:00+00:00
+[2026-04-09T21:47:30.748+0000] {standard_task_runner.py:60} INFO - Started process 366 to run task
+[2026-04-09T21:47:30.753+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'dbt_run', 'scheduled__2026-04-08T07:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmpjbot49o_']
+[2026-04-09T21:47:30.758+0000] {standard_task_runner.py:88} INFO - Job 11: Subtask dbt_run
+[2026-04-09T21:47:30.854+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.dbt_run scheduled__2026-04-08T07:00:00+00:00 [running]> on host dfe90bf0f232
+[2026-04-09T21:47:30.973+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='dbt_run' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T07:00:00+00:00'
+[2026-04-09T21:47:30.977+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-09T21:47:30.979+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/*** && dbt run --profiles-dir /opt/***/dbt']
+[2026-04-09T21:47:30.993+0000] {subprocess.py:86} INFO - Output:
+[2026-04-09T21:47:32.863+0000] {subprocess.py:93} INFO - [0m21:47:32  Running with dbt=1.8.7
+[2026-04-09T21:47:34.074+0000] {subprocess.py:93} INFO - [0m21:47:34  [[33mWARNING[0m]: Deprecated functionality
+[2026-04-09T21:47:34.076+0000] {subprocess.py:93} INFO - The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+[2026-04-09T21:47:34.077+0000] {subprocess.py:93} INFO - longer be supported in a future version of dbt-core. If you wish to write dbt
+[2026-04-09T21:47:34.077+0000] {subprocess.py:93} INFO - artifacts to a custom directory, please use the --target-path CLI flag or
+[2026-04-09T21:47:34.078+0000] {subprocess.py:93} INFO - DBT_TARGET_PATH env var instead.
+[2026-04-09T21:47:34.316+0000] {subprocess.py:93} INFO - [0m21:47:34  Registered adapter: bigquery=1.8.2
+[2026-04-09T21:47:35.715+0000] {subprocess.py:93} INFO - [0m21:47:35  Found 9 models, 122 data tests, 3 sources, 480 macros
+[2026-04-09T21:47:35.721+0000] {subprocess.py:93} INFO - [0m21:47:35
+[2026-04-09T21:47:39.480+0000] {subprocess.py:93} INFO - [0m21:47:39  Concurrency: 1 threads (target='dev')
+[2026-04-09T21:47:39.482+0000] {subprocess.py:93} INFO - [0m21:47:39
+[2026-04-09T21:47:39.495+0000] {subprocess.py:93} INFO - [0m21:47:39  1 of 9 START sql view model staging.stg_fixtures ............................... [RUN]
+[2026-04-09T21:47:40.876+0000] {subprocess.py:93} INFO - [0m21:47:40  1 of 9 OK created sql view model staging.stg_fixtures .......................... [[32mCREATE VIEW (0 processed)[0m in 1.38s]
+[2026-04-09T21:47:40.880+0000] {subprocess.py:93} INFO - [0m21:47:40  2 of 9 START sql view model staging.stg_standings .............................. [RUN]
+[2026-04-09T21:47:42.054+0000] {subprocess.py:93} INFO - [0m21:47:42  2 of 9 OK created sql view model staging.stg_standings ......................... [[32mCREATE VIEW (0 processed)[0m in 1.17s]
+[2026-04-09T21:47:42.059+0000] {subprocess.py:93} INFO - [0m21:47:42  3 of 9 START sql view model staging.stg_top_scorers ............................ [RUN]
+[2026-04-09T21:47:43.353+0000] {subprocess.py:93} INFO - [0m21:47:43  3 of 9 OK created sql view model staging.stg_top_scorers ....................... [[32mCREATE VIEW (0 processed)[0m in 1.29s]
+[2026-04-09T21:47:43.359+0000] {subprocess.py:93} INFO - [0m21:47:43  4 of 9 START sql view model intermediate.int_team_away_stats ................... [RUN]
+[2026-04-09T21:47:44.950+0000] {subprocess.py:93} INFO - [0m21:47:44  4 of 9 OK created sql view model intermediate.int_team_away_stats .............. [[32mCREATE VIEW (0 processed)[0m in 1.59s]
+[2026-04-09T21:47:44.953+0000] {subprocess.py:93} INFO - [0m21:47:44  5 of 9 START sql view model intermediate.int_team_home_stats ................... [RUN]
+[2026-04-09T21:47:46.414+0000] {subprocess.py:93} INFO - [0m21:47:46  5 of 9 OK created sql view model intermediate.int_team_home_stats .............. [[32mCREATE VIEW (0 processed)[0m in 1.46s]
+[2026-04-09T21:47:46.417+0000] {subprocess.py:93} INFO - [0m21:47:46  6 of 9 START sql view model intermediate.int_team_last_5_matches ............... [RUN]
+[2026-04-09T21:47:47.902+0000] {subprocess.py:93} INFO - [0m21:47:47  6 of 9 OK created sql view model intermediate.int_team_last_5_matches .......... [[32mCREATE VIEW (0 processed)[0m in 1.48s]
+[2026-04-09T21:47:47.907+0000] {subprocess.py:93} INFO - [0m21:47:47  7 of 9 START sql table model marts.mart_player_performance ..................... [RUN]
+[2026-04-09T21:47:50.984+0000] {subprocess.py:93} INFO - [0m21:47:50  7 of 9 OK created sql table model marts.mart_player_performance ................ [[32mCREATE TABLE (30.0 rows, 7.9 KiB processed)[0m in 3.07s]
+[2026-04-09T21:47:50.989+0000] {subprocess.py:93} INFO - [0m21:47:50  8 of 9 START sql table model marts.mart_team_performance ....................... [RUN]
+[2026-04-09T21:47:54.429+0000] {subprocess.py:93} INFO - [0m21:47:54  8 of 9 OK created sql table model marts.mart_team_performance .................. [[32mCREATE TABLE (58.0 rows, 158.7 KiB processed)[0m in 3.43s]
+[2026-04-09T21:47:54.435+0000] {subprocess.py:93} INFO - [0m21:47:54  9 of 9 START sql table model marts.mart_fixtures ............................... [RUN]
+[2026-04-09T21:47:57.433+0000] {subprocess.py:93} INFO - [0m21:47:57  9 of 9 OK created sql table model marts.mart_fixtures .......................... [[32mCREATE TABLE (207.0 rows, 112.3 KiB processed)[0m in 2.99s]
+[2026-04-09T21:47:57.466+0000] {subprocess.py:93} INFO - [0m21:47:57
+[2026-04-09T21:47:57.471+0000] {subprocess.py:93} INFO - [0m21:47:57  Finished running 6 view models, 3 table models in 0 hours 0 minutes and 21.74 seconds (21.74s).
+[2026-04-09T21:47:57.691+0000] {subprocess.py:93} INFO - [0m21:47:57
+[2026-04-09T21:47:57.692+0000] {subprocess.py:93} INFO - [0m21:47:57  [32mCompleted successfully[0m
+[2026-04-09T21:47:57.694+0000] {subprocess.py:93} INFO - [0m21:47:57
+[2026-04-09T21:47:57.696+0000] {subprocess.py:93} INFO - [0m21:47:57  Done. PASS=9 WARN=0 ERROR=0 SKIP=0 TOTAL=9
+[2026-04-09T21:47:58.987+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-04-09T21:47:59.022+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=daily_football_ingestion, task_id=dbt_run, execution_date=20260408T070000, start_date=20260409T214730, end_date=20260409T214759
+[2026-04-09T21:47:59.073+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-09T21:47:59.097+0000] {taskinstance.py:3280} INFO - 1 downstream tasks scheduled from follow-on schedule check

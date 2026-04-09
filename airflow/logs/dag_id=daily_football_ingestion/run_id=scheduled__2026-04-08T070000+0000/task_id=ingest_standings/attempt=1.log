@@ -1,0 +1,120 @@
+[2026-04-09T21:04:12.943+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:04:12.955+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:04:12.956+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-09T21:04:12.981+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ingest_standings> on 2026-04-08 07:00:00+00:00
+[2026-04-09T21:04:12.991+0000] {standard_task_runner.py:60} INFO - Started process 247 to run task
+[2026-04-09T21:04:12.999+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'ingest_standings', 'scheduled__2026-04-08T07:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmpp1ktd788']
+[2026-04-09T21:04:13.005+0000] {standard_task_runner.py:88} INFO - Job 4: Subtask ingest_standings
+[2026-04-09T21:04:13.109+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [running]> on host f9c54a541299
+[2026-04-09T21:04:13.234+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='ingest_standings' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T07:00:00+00:00'
+[2026-04-09T21:04:13.237+0000] {logging_mixin.py:188} INFO - Extracting standings: premier_league...
+[2026-04-09T21:04:13.515+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:04:13.519+0000] {logging_mixin.py:188} INFO - Extracting standings: la_liga...
+[2026-04-09T21:04:13.722+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:04:13.725+0000] {logging_mixin.py:188} INFO - Extracting standings: liga_portugal...
+[2026-04-09T21:04:13.882+0000] {logging_mixin.py:188} INFO -   → 18 teams found
+[2026-04-09T21:04:13.884+0000] {logging_mixin.py:188} INFO - 
+Total: 58 extracted rows
+[2026-04-09T21:04:13.884+0000] {logging_mixin.py:188} INFO - Loading to BigQuery...
+[2026-04-09T21:04:13.887+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/ingestion/football_data_org_api/standings.py", line 84, in main
+    load_json_to_bigquery(all_standings, "raw", "standings", SCHEMA)
+  File "/opt/airflow/ingestion/utils/bigquery_client.py", line 13, in load_json_to_bigquery
+    client = get_client()
+  File "/opt/airflow/ingestion/utils/bigquery_client.py", line 10, in get_client
+    return bigquery.Client(project="football-analytics-492122")
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 237, in __init__
+    super(Client, self).__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/client/__init__.py", line 321, in __init__
+    Client.__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/client/__init__.py", line 178, in __init__
+    credentials, _ = google.auth.default(scopes=scopes)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 657, in default
+    credentials, project_id = checker()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 650, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 270, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 114, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File C:\Users\João\Desktop\Data-Portfolio\football-analytics\credentials.json was not found.
+[2026-04-09T21:04:13.920+0000] {taskinstance.py:1138} INFO - Marking task as UP_FOR_RETRY. dag_id=daily_football_ingestion, task_id=ingest_standings, execution_date=20260408T070000, start_date=20260409T210412, end_date=20260409T210413
+[2026-04-09T21:04:13.938+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 4 for task ingest_standings (File C:\Users\João\Desktop\Data-Portfolio\football-analytics\credentials.json was not found.; 247)
+[2026-04-09T21:04:13.980+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-09T21:04:14.011+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T21:28:05.239+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:28:05.250+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:28:05.251+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-09T21:28:05.271+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ingest_standings> on 2026-04-08 07:00:00+00:00
+[2026-04-09T21:28:05.282+0000] {standard_task_runner.py:60} INFO - Started process 224 to run task
+[2026-04-09T21:28:05.290+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'ingest_standings', 'scheduled__2026-04-08T07:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmp4yy2k_hu']
+[2026-04-09T21:28:05.294+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask ingest_standings
+[2026-04-09T21:28:05.418+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [running]> on host a2250537e0c4
+[2026-04-09T21:28:05.548+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='ingest_standings' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T07:00:00+00:00'
+[2026-04-09T21:28:05.551+0000] {logging_mixin.py:188} INFO - Extracting standings: premier_league...
+[2026-04-09T21:28:05.762+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:28:05.764+0000] {logging_mixin.py:188} INFO - Extracting standings: la_liga...
+[2026-04-09T21:28:05.919+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:28:05.923+0000] {logging_mixin.py:188} INFO - Extracting standings: liga_portugal...
+[2026-04-09T21:28:06.098+0000] {logging_mixin.py:188} INFO -   → 18 teams found
+[2026-04-09T21:28:06.099+0000] {logging_mixin.py:188} INFO - 
+Total: 58 extracted rows
+[2026-04-09T21:28:06.100+0000] {logging_mixin.py:188} INFO - Loading to BigQuery...
+[2026-04-09T21:28:09.625+0000] {logging_mixin.py:188} INFO - Loaded 58 rows into football-analytics-492122.raw.standings
+[2026-04-09T21:28:09.626+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-09T21:28:09.642+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=daily_football_ingestion, task_id=ingest_standings, execution_date=20260408T070000, start_date=20260409T212805, end_date=20260409T212809
+[2026-04-09T21:28:09.710+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-09T21:28:09.751+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T21:34:29.451+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:34:29.473+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:34:29.475+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-09T21:34:29.524+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ingest_standings> on 2026-04-08 07:00:00+00:00
+[2026-04-09T21:34:29.543+0000] {standard_task_runner.py:60} INFO - Started process 237 to run task
+[2026-04-09T21:34:29.561+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'ingest_standings', 'scheduled__2026-04-08T07:00:00+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmpxdpmzrxq']
+[2026-04-09T21:34:29.572+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask ingest_standings
+[2026-04-09T21:34:29.823+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [running]> on host 65c8b2919894
+[2026-04-09T21:34:30.038+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='ingest_standings' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T07:00:00+00:00'
+[2026-04-09T21:34:30.041+0000] {logging_mixin.py:188} INFO - Extracting standings: premier_league...
+[2026-04-09T21:34:30.220+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:34:30.222+0000] {logging_mixin.py:188} INFO - Extracting standings: la_liga...
+[2026-04-09T21:34:30.360+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:34:30.361+0000] {logging_mixin.py:188} INFO - Extracting standings: liga_portugal...
+[2026-04-09T21:34:30.543+0000] {logging_mixin.py:188} INFO -   → 18 teams found
+[2026-04-09T21:34:30.544+0000] {logging_mixin.py:188} INFO - 
+Total: 58 extracted rows
+[2026-04-09T21:34:30.545+0000] {logging_mixin.py:188} INFO - Loading to BigQuery...
+[2026-04-09T21:34:34.128+0000] {logging_mixin.py:188} INFO - Loaded 58 rows into football-analytics-492122.raw.standings
+[2026-04-09T21:34:34.129+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-09T21:34:34.150+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=daily_football_ingestion, task_id=ingest_standings, execution_date=20260408T070000, start_date=20260409T213429, end_date=20260409T213434
+[2026-04-09T21:34:34.229+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-09T21:34:34.258+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-04-09T21:42:12.078+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:42:12.090+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:42:12.091+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-09T21:42:12.125+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ingest_standings> on 2026-04-08 07:00:00+00:00
+[2026-04-09T21:42:12.136+0000] {standard_task_runner.py:60} INFO - Started process 231 to run task
+[2026-04-09T21:42:12.143+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'ingest_standings', 'scheduled__2026-04-08T07:00:00+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmpsdeta_sv']
+[2026-04-09T21:42:12.148+0000] {standard_task_runner.py:88} INFO - Job 3: Subtask ingest_standings
+[2026-04-09T21:42:12.281+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.ingest_standings scheduled__2026-04-08T07:00:00+00:00 [running]> on host dfe90bf0f232
+[2026-04-09T21:42:12.456+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='ingest_standings' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T07:00:00+00:00'
+[2026-04-09T21:42:12.459+0000] {logging_mixin.py:188} INFO - Extracting standings: premier_league...
+[2026-04-09T21:42:12.653+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:42:12.655+0000] {logging_mixin.py:188} INFO - Extracting standings: la_liga...
+[2026-04-09T21:42:12.837+0000] {logging_mixin.py:188} INFO -   → 20 teams found
+[2026-04-09T21:42:12.838+0000] {logging_mixin.py:188} INFO - Extracting standings: liga_portugal...
+[2026-04-09T21:42:13.029+0000] {logging_mixin.py:188} INFO -   → 18 teams found
+[2026-04-09T21:42:13.033+0000] {logging_mixin.py:188} INFO - 
+Total: 58 extracted rows
+[2026-04-09T21:42:13.035+0000] {logging_mixin.py:188} INFO - Loading to BigQuery...
+[2026-04-09T21:42:16.889+0000] {logging_mixin.py:188} INFO - Loaded 58 rows into football-analytics-492122.raw.standings
+[2026-04-09T21:42:16.890+0000] {python.py:201} INFO - Done. Returned value was: None
+[2026-04-09T21:42:16.922+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=daily_football_ingestion, task_id=ingest_standings, execution_date=20260408T070000, start_date=20260409T214212, end_date=20260409T214216
+[2026-04-09T21:42:16.984+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-09T21:42:17.047+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,53 @@
+[2026-04-09T21:09:21.592+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_top_scorers manual__2026-04-09T21:04:14.195541+00:00 [queued]>
+[2026-04-09T21:09:21.611+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.ingest_top_scorers manual__2026-04-09T21:04:14.195541+00:00 [queued]>
+[2026-04-09T21:09:21.612+0000] {taskinstance.py:2170} INFO - Starting attempt 2 of 2
+[2026-04-09T21:09:21.632+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): ingest_top_scorers> on 2026-04-09 21:04:14.195541+00:00
+[2026-04-09T21:09:21.648+0000] {standard_task_runner.py:60} INFO - Started process 334 to run task
+[2026-04-09T21:09:21.655+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'ingest_top_scorers', 'manual__2026-04-09T21:04:14.195541+00:00', '--job-id', '13', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmpauy9sbl2']
+[2026-04-09T21:09:21.660+0000] {standard_task_runner.py:88} INFO - Job 13: Subtask ingest_top_scorers
+[2026-04-09T21:09:21.774+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.ingest_top_scorers manual__2026-04-09T21:04:14.195541+00:00 [running]> on host f9c54a541299
+[2026-04-09T21:09:21.899+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='ingest_top_scorers' AIRFLOW_CTX_EXECUTION_DATE='2026-04-09T21:04:14.195541+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-04-09T21:04:14.195541+00:00'
+[2026-04-09T21:09:21.903+0000] {logging_mixin.py:188} INFO - Extracting top scorers: premier_league...
+[2026-04-09T21:09:22.042+0000] {logging_mixin.py:188} INFO -   -> 0 scorers found
+[2026-04-09T21:09:22.043+0000] {logging_mixin.py:188} INFO - Extracting top scorers: la_liga...
+[2026-04-09T21:09:22.179+0000] {logging_mixin.py:188} INFO -   -> 0 scorers found
+[2026-04-09T21:09:22.184+0000] {logging_mixin.py:188} INFO - Extracting top scorers: liga_portugal...
+[2026-04-09T21:09:22.321+0000] {logging_mixin.py:188} INFO -   -> 0 scorers found
+[2026-04-09T21:09:22.325+0000] {logging_mixin.py:188} INFO - Extracting top scorers: champions_league...
+[2026-04-09T21:09:22.468+0000] {logging_mixin.py:188} INFO -   -> 0 scorers found
+[2026-04-09T21:09:22.472+0000] {logging_mixin.py:188} INFO - 
+Total: 0 rows extracted
+[2026-04-09T21:09:22.473+0000] {logging_mixin.py:188} INFO - Loading to BigQuery...
+[2026-04-09T21:09:22.475+0000] {taskinstance.py:2698} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 433, in _execute_task
+    result = execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 199, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 216, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/ingestion/football_data_org_api/top_scorers.py", line 74, in main
+    load_json_to_bigquery(all_scorers, "raw", "top_scorers", SCHEMA)
+  File "/opt/airflow/ingestion/utils/bigquery_client.py", line 13, in load_json_to_bigquery
+    client = get_client()
+  File "/opt/airflow/ingestion/utils/bigquery_client.py", line 10, in get_client
+    return bigquery.Client(project="football-analytics-492122")
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/bigquery/client.py", line 237, in __init__
+    super(Client, self).__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/client/__init__.py", line 321, in __init__
+    Client.__init__(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/cloud/client/__init__.py", line 178, in __init__
+    credentials, _ = google.auth.default(scopes=scopes)
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 657, in default
+    credentials, project_id = checker()
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 650, in <lambda>
+    lambda: _get_explicit_environ_credentials(quota_project_id=quota_project_id),
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 270, in _get_explicit_environ_credentials
+    credentials, project_id = load_credentials_from_file(
+  File "/home/airflow/.local/lib/python3.8/site-packages/google/auth/_default.py", line 114, in load_credentials_from_file
+    raise exceptions.DefaultCredentialsError(
+google.auth.exceptions.DefaultCredentialsError: File C:\Users\João\Desktop\Data-Portfolio\football-analytics\credentials.json was not found.
+[2026-04-09T21:09:22.519+0000] {taskinstance.py:1138} INFO - Marking task as FAILED. dag_id=daily_football_ingestion, task_id=ingest_top_scorers, execution_date=20260409T210414, start_date=20260409T210921, end_date=20260409T210922
+[2026-04-09T21:09:22.542+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 13 for task ingest_top_scorers (File C:\Users\João\Desktop\Data-Portfolio\football-analytics\credentials.json was not found.; 334)
+[2026-04-09T21:09:22.595+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2026-04-09T21:09:22.623+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check

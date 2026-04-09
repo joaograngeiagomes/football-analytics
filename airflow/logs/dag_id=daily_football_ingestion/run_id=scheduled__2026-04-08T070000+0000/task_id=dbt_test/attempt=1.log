@@ -1,0 +1,307 @@
+[2026-04-09T21:48:00.842+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: daily_football_ingestion.dbt_test scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:48:00.853+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: daily_football_ingestion.dbt_test scheduled__2026-04-08T07:00:00+00:00 [queued]>
+[2026-04-09T21:48:00.854+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 2
+[2026-04-09T21:48:00.872+0000] {taskinstance.py:2191} INFO - Executing <Task(BashOperator): dbt_test> on 2026-04-08 07:00:00+00:00
+[2026-04-09T21:48:00.880+0000] {standard_task_runner.py:60} INFO - Started process 392 to run task
+[2026-04-09T21:48:00.885+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'daily_football_ingestion', 'dbt_test', 'scheduled__2026-04-08T07:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/daily_ingestion.py', '--cfg-path', '/tmp/tmpoth1bpxu']
+[2026-04-09T21:48:00.889+0000] {standard_task_runner.py:88} INFO - Job 12: Subtask dbt_test
+[2026-04-09T21:48:00.977+0000] {task_command.py:423} INFO - Running <TaskInstance: daily_football_ingestion.dbt_test scheduled__2026-04-08T07:00:00+00:00 [running]> on host dfe90bf0f232
+[2026-04-09T21:48:01.077+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='daily_football_ingestion' AIRFLOW_CTX_TASK_ID='dbt_test' AIRFLOW_CTX_EXECUTION_DATE='2026-04-08T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-04-08T07:00:00+00:00'
+[2026-04-09T21:48:01.081+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2026-04-09T21:48:01.083+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'cd /opt/*** && dbt test --profiles-dir /opt/***/dbt']
+[2026-04-09T21:48:01.102+0000] {subprocess.py:86} INFO - Output:
+[2026-04-09T21:48:03.405+0000] {subprocess.py:93} INFO - [0m21:48:03  Running with dbt=1.8.7
+[2026-04-09T21:48:04.500+0000] {subprocess.py:93} INFO - [0m21:48:04  [[33mWARNING[0m]: Deprecated functionality
+[2026-04-09T21:48:04.500+0000] {subprocess.py:93} INFO - The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+[2026-04-09T21:48:04.501+0000] {subprocess.py:93} INFO - longer be supported in a future version of dbt-core. If you wish to write dbt
+[2026-04-09T21:48:04.502+0000] {subprocess.py:93} INFO - artifacts to a custom directory, please use the --target-path CLI flag or
+[2026-04-09T21:48:04.502+0000] {subprocess.py:93} INFO - DBT_TARGET_PATH env var instead.
+[2026-04-09T21:48:04.804+0000] {subprocess.py:93} INFO - [0m21:48:04  Registered adapter: bigquery=1.8.2
+[2026-04-09T21:48:06.232+0000] {subprocess.py:93} INFO - [0m21:48:06  Found 9 models, 122 data tests, 3 sources, 480 macros
+[2026-04-09T21:48:06.248+0000] {subprocess.py:93} INFO - [0m21:48:06
+[2026-04-09T21:48:08.099+0000] {subprocess.py:93} INFO - [0m21:48:08  Concurrency: 1 threads (target='dev')
+[2026-04-09T21:48:08.100+0000] {subprocess.py:93} INFO - [0m21:48:08
+[2026-04-09T21:48:08.116+0000] {subprocess.py:93} INFO - [0m21:48:08  1 of 122 START test accepted_values_int_team_last_5_matches_is_home__False__0__1  [RUN]
+[2026-04-09T21:48:09.772+0000] {subprocess.py:93} INFO - [0m21:48:09  1 of 122 PASS accepted_values_int_team_last_5_matches_is_home__False__0__1 ..... [[32mPASS[0m in 1.65s]
+[2026-04-09T21:48:09.778+0000] {subprocess.py:93} INFO - [0m21:48:09  2 of 122 START test accepted_values_int_team_last_5_matches_match_result__W__D__L  [RUN]
+[2026-04-09T21:48:11.487+0000] {subprocess.py:93} INFO - [0m21:48:11  2 of 122 PASS accepted_values_int_team_last_5_matches_match_result__W__D__L .... [[32mPASS[0m in 1.71s]
+[2026-04-09T21:48:11.493+0000] {subprocess.py:93} INFO - [0m21:48:11  3 of 122 START test accepted_values_mart_fixtures_fixture_status__TIMED__SCHEDULED  [RUN]
+[2026-04-09T21:48:13.017+0000] {subprocess.py:93} INFO - [0m21:48:13  3 of 122 PASS accepted_values_mart_fixtures_fixture_status__TIMED__SCHEDULED ... [[32mPASS[0m in 1.51s]
+[2026-04-09T21:48:13.039+0000] {subprocess.py:93} INFO - [0m21:48:13  4 of 122 START test not_null_int_team_away_stats_away_draws .................... [RUN]
+[2026-04-09T21:48:15.003+0000] {subprocess.py:93} INFO - [0m21:48:15  4 of 122 PASS not_null_int_team_away_stats_away_draws .......................... [[32mPASS[0m in 1.96s]
+[2026-04-09T21:48:15.008+0000] {subprocess.py:93} INFO - [0m21:48:15  5 of 122 START test not_null_int_team_away_stats_away_goals_conceded ........... [RUN]
+[2026-04-09T21:48:16.585+0000] {subprocess.py:93} INFO - [0m21:48:16  5 of 122 PASS not_null_int_team_away_stats_away_goals_conceded ................. [[32mPASS[0m in 1.58s]
+[2026-04-09T21:48:16.590+0000] {subprocess.py:93} INFO - [0m21:48:16  6 of 122 START test not_null_int_team_away_stats_away_goals_scored ............. [RUN]
+[2026-04-09T21:48:18.259+0000] {subprocess.py:93} INFO - [0m21:48:18  6 of 122 PASS not_null_int_team_away_stats_away_goals_scored ................... [[32mPASS[0m in 1.66s]
+[2026-04-09T21:48:18.272+0000] {subprocess.py:93} INFO - [0m21:48:18  7 of 122 START test not_null_int_team_away_stats_away_losses ................... [RUN]
+[2026-04-09T21:48:20.070+0000] {subprocess.py:93} INFO - [0m21:48:20  7 of 122 PASS not_null_int_team_away_stats_away_losses ......................... [[32mPASS[0m in 1.80s]
+[2026-04-09T21:48:20.073+0000] {subprocess.py:93} INFO - [0m21:48:20  8 of 122 START test not_null_int_team_away_stats_away_team_id .................. [RUN]
+[2026-04-09T21:48:21.886+0000] {subprocess.py:93} INFO - [0m21:48:21  8 of 122 PASS not_null_int_team_away_stats_away_team_id ........................ [[32mPASS[0m in 1.81s]
+[2026-04-09T21:48:21.911+0000] {subprocess.py:93} INFO - [0m21:48:21  9 of 122 START test not_null_int_team_away_stats_away_wins ..................... [RUN]
+[2026-04-09T21:48:23.506+0000] {subprocess.py:93} INFO - [0m21:48:23  9 of 122 PASS not_null_int_team_away_stats_away_wins ........................... [[32mPASS[0m in 1.59s]
+[2026-04-09T21:48:23.524+0000] {subprocess.py:93} INFO - [0m21:48:23  10 of 122 START test not_null_int_team_away_stats_league_code .................. [RUN]
+[2026-04-09T21:48:25.252+0000] {subprocess.py:93} INFO - [0m21:48:25  10 of 122 PASS not_null_int_team_away_stats_league_code ........................ [[32mPASS[0m in 1.72s]
+[2026-04-09T21:48:25.256+0000] {subprocess.py:93} INFO - [0m21:48:25  11 of 122 START test not_null_int_team_away_stats_league_name .................. [RUN]
+[2026-04-09T21:48:26.946+0000] {subprocess.py:93} INFO - [0m21:48:26  11 of 122 PASS not_null_int_team_away_stats_league_name ........................ [[32mPASS[0m in 1.69s]
+[2026-04-09T21:48:26.951+0000] {subprocess.py:93} INFO - [0m21:48:26  12 of 122 START test not_null_int_team_away_stats_season ....................... [RUN]
+[2026-04-09T21:48:28.934+0000] {subprocess.py:93} INFO - [0m21:48:28  12 of 122 PASS not_null_int_team_away_stats_season ............................. [[32mPASS[0m in 1.98s]
+[2026-04-09T21:48:28.939+0000] {subprocess.py:93} INFO - [0m21:48:28  13 of 122 START test not_null_int_team_home_stats_home_draws ................... [RUN]
+[2026-04-09T21:48:30.444+0000] {subprocess.py:93} INFO - [0m21:48:30  13 of 122 PASS not_null_int_team_home_stats_home_draws ......................... [[32mPASS[0m in 1.50s]
+[2026-04-09T21:48:30.448+0000] {subprocess.py:93} INFO - [0m21:48:30  14 of 122 START test not_null_int_team_home_stats_home_goals_conceded .......... [RUN]
+[2026-04-09T21:48:32.137+0000] {subprocess.py:93} INFO - [0m21:48:32  14 of 122 PASS not_null_int_team_home_stats_home_goals_conceded ................ [[32mPASS[0m in 1.69s]
+[2026-04-09T21:48:32.140+0000] {subprocess.py:93} INFO - [0m21:48:32  15 of 122 START test not_null_int_team_home_stats_home_goals_scored ............ [RUN]
+[2026-04-09T21:48:33.742+0000] {subprocess.py:93} INFO - [0m21:48:33  15 of 122 PASS not_null_int_team_home_stats_home_goals_scored .................. [[32mPASS[0m in 1.60s]
+[2026-04-09T21:48:33.754+0000] {subprocess.py:93} INFO - [0m21:48:33  16 of 122 START test not_null_int_team_home_stats_home_losses .................. [RUN]
+[2026-04-09T21:48:35.498+0000] {subprocess.py:93} INFO - [0m21:48:35  16 of 122 PASS not_null_int_team_home_stats_home_losses ........................ [[32mPASS[0m in 1.74s]
+[2026-04-09T21:48:35.502+0000] {subprocess.py:93} INFO - [0m21:48:35  17 of 122 START test not_null_int_team_home_stats_home_team_id ................. [RUN]
+[2026-04-09T21:48:37.088+0000] {subprocess.py:93} INFO - [0m21:48:37  17 of 122 PASS not_null_int_team_home_stats_home_team_id ....................... [[32mPASS[0m in 1.58s]
+[2026-04-09T21:48:37.094+0000] {subprocess.py:93} INFO - [0m21:48:37  18 of 122 START test not_null_int_team_home_stats_home_wins .................... [RUN]
+[2026-04-09T21:48:38.544+0000] {subprocess.py:93} INFO - [0m21:48:38  18 of 122 PASS not_null_int_team_home_stats_home_wins .......................... [[32mPASS[0m in 1.45s]
+[2026-04-09T21:48:38.548+0000] {subprocess.py:93} INFO - [0m21:48:38  19 of 122 START test not_null_int_team_home_stats_league_code .................. [RUN]
+[2026-04-09T21:48:40.120+0000] {subprocess.py:93} INFO - [0m21:48:40  19 of 122 PASS not_null_int_team_home_stats_league_code ........................ [[32mPASS[0m in 1.57s]
+[2026-04-09T21:48:40.125+0000] {subprocess.py:93} INFO - [0m21:48:40  20 of 122 START test not_null_int_team_home_stats_league_name .................. [RUN]
+[2026-04-09T21:48:42.059+0000] {subprocess.py:93} INFO - [0m21:48:42  20 of 122 PASS not_null_int_team_home_stats_league_name ........................ [[32mPASS[0m in 1.93s]
+[2026-04-09T21:48:42.063+0000] {subprocess.py:93} INFO - [0m21:48:42  21 of 122 START test not_null_int_team_home_stats_season ....................... [RUN]
+[2026-04-09T21:48:43.713+0000] {subprocess.py:93} INFO - [0m21:48:43  21 of 122 PASS not_null_int_team_home_stats_season ............................. [[32mPASS[0m in 1.64s]
+[2026-04-09T21:48:43.736+0000] {subprocess.py:93} INFO - [0m21:48:43  22 of 122 START test not_null_int_team_last_5_matches_fixture_date ............. [RUN]
+[2026-04-09T21:48:45.452+0000] {subprocess.py:93} INFO - [0m21:48:45  22 of 122 PASS not_null_int_team_last_5_matches_fixture_date ................... [[32mPASS[0m in 1.71s]
+[2026-04-09T21:48:45.456+0000] {subprocess.py:93} INFO - [0m21:48:45  23 of 122 START test not_null_int_team_last_5_matches_is_home .................. [RUN]
+[2026-04-09T21:48:47.167+0000] {subprocess.py:93} INFO - [0m21:48:47  23 of 122 PASS not_null_int_team_last_5_matches_is_home ........................ [[32mPASS[0m in 1.71s]
+[2026-04-09T21:48:47.172+0000] {subprocess.py:93} INFO - [0m21:48:47  24 of 122 START test not_null_int_team_last_5_matches_match_result ............. [RUN]
+[2026-04-09T21:48:48.789+0000] {subprocess.py:93} INFO - [0m21:48:48  24 of 122 PASS not_null_int_team_last_5_matches_match_result ................... [[32mPASS[0m in 1.62s]
+[2026-04-09T21:48:48.796+0000] {subprocess.py:93} INFO - [0m21:48:48  25 of 122 START test not_null_int_team_last_5_matches_team_id .................. [RUN]
+[2026-04-09T21:48:50.266+0000] {subprocess.py:93} INFO - [0m21:48:50  25 of 122 PASS not_null_int_team_last_5_matches_team_id ........................ [[32mPASS[0m in 1.47s]
+[2026-04-09T21:48:50.276+0000] {subprocess.py:93} INFO - [0m21:48:50  26 of 122 START test not_null_mart_fixtures_away_team_form_away ................ [RUN]
+[2026-04-09T21:48:51.562+0000] {subprocess.py:93} INFO - [0m21:48:51  26 of 122 PASS not_null_mart_fixtures_away_team_form_away ...................... [[32mPASS[0m in 1.28s]
+[2026-04-09T21:48:51.565+0000] {subprocess.py:93} INFO - [0m21:48:51  27 of 122 START test not_null_mart_fixtures_away_team_id ....................... [RUN]
+[2026-04-09T21:48:52.885+0000] {subprocess.py:93} INFO - [0m21:48:52  27 of 122 PASS not_null_mart_fixtures_away_team_id ............................. [[32mPASS[0m in 1.32s]
+[2026-04-09T21:48:52.896+0000] {subprocess.py:93} INFO - [0m21:48:52  28 of 122 START test not_null_mart_fixtures_away_team_name ..................... [RUN]
+[2026-04-09T21:48:54.322+0000] {subprocess.py:93} INFO - [0m21:48:54  28 of 122 PASS not_null_mart_fixtures_away_team_name ........................... [[32mPASS[0m in 1.42s]
+[2026-04-09T21:48:54.339+0000] {subprocess.py:93} INFO - [0m21:48:54  29 of 122 START test not_null_mart_fixtures_away_team_points ................... [RUN]
+[2026-04-09T21:48:55.820+0000] {subprocess.py:93} INFO - [0m21:48:55  29 of 122 PASS not_null_mart_fixtures_away_team_points ......................... [[32mPASS[0m in 1.48s]
+[2026-04-09T21:48:55.823+0000] {subprocess.py:93} INFO - [0m21:48:55  30 of 122 START test not_null_mart_fixtures_away_team_position ................. [RUN]
+[2026-04-09T21:48:57.185+0000] {subprocess.py:93} INFO - [0m21:48:57  30 of 122 PASS not_null_mart_fixtures_away_team_position ....................... [[32mPASS[0m in 1.36s]
+[2026-04-09T21:48:57.190+0000] {subprocess.py:93} INFO - [0m21:48:57  31 of 122 START test not_null_mart_fixtures_fixture_date ....................... [RUN]
+[2026-04-09T21:48:58.763+0000] {subprocess.py:93} INFO - [0m21:48:58  31 of 122 PASS not_null_mart_fixtures_fixture_date ............................. [[32mPASS[0m in 1.57s]
+[2026-04-09T21:48:58.767+0000] {subprocess.py:93} INFO - [0m21:48:58  32 of 122 START test not_null_mart_fixtures_fixture_id ......................... [RUN]
+[2026-04-09T21:49:00.015+0000] {subprocess.py:93} INFO - [0m21:49:00  32 of 122 PASS not_null_mart_fixtures_fixture_id ............................... [[32mPASS[0m in 1.25s]
+[2026-04-09T21:49:00.019+0000] {subprocess.py:93} INFO - [0m21:49:00  33 of 122 START test not_null_mart_fixtures_fixture_status ..................... [RUN]
+[2026-04-09T21:49:01.506+0000] {subprocess.py:93} INFO - [0m21:49:01  33 of 122 PASS not_null_mart_fixtures_fixture_status ........................... [[32mPASS[0m in 1.49s]
+[2026-04-09T21:49:01.511+0000] {subprocess.py:93} INFO - [0m21:49:01  34 of 122 START test not_null_mart_fixtures_home_team_form_home ................ [RUN]
+[2026-04-09T21:49:02.919+0000] {subprocess.py:93} INFO - [0m21:49:02  34 of 122 PASS not_null_mart_fixtures_home_team_form_home ...................... [[32mPASS[0m in 1.41s]
+[2026-04-09T21:49:02.923+0000] {subprocess.py:93} INFO - [0m21:49:02  35 of 122 START test not_null_mart_fixtures_home_team_id ....................... [RUN]
+[2026-04-09T21:49:04.781+0000] {subprocess.py:93} INFO - [0m21:49:04  35 of 122 PASS not_null_mart_fixtures_home_team_id ............................. [[32mPASS[0m in 1.86s]
+[2026-04-09T21:49:04.788+0000] {subprocess.py:93} INFO - [0m21:49:04  36 of 122 START test not_null_mart_fixtures_home_team_name ..................... [RUN]
+[2026-04-09T21:49:06.023+0000] {subprocess.py:93} INFO - [0m21:49:06  36 of 122 PASS not_null_mart_fixtures_home_team_name ........................... [[32mPASS[0m in 1.23s]
+[2026-04-09T21:49:06.028+0000] {subprocess.py:93} INFO - [0m21:49:06  37 of 122 START test not_null_mart_fixtures_home_team_points ................... [RUN]
+[2026-04-09T21:49:07.319+0000] {subprocess.py:93} INFO - [0m21:49:07  37 of 122 PASS not_null_mart_fixtures_home_team_points ......................... [[32mPASS[0m in 1.29s]
+[2026-04-09T21:49:07.340+0000] {subprocess.py:93} INFO - [0m21:49:07  38 of 122 START test not_null_mart_fixtures_home_team_position ................. [RUN]
+[2026-04-09T21:49:08.786+0000] {subprocess.py:93} INFO - [0m21:49:08  38 of 122 PASS not_null_mart_fixtures_home_team_position ....................... [[32mPASS[0m in 1.44s]
+[2026-04-09T21:49:08.793+0000] {subprocess.py:93} INFO - [0m21:49:08  39 of 122 START test not_null_mart_fixtures_league_name ........................ [RUN]
+[2026-04-09T21:49:10.179+0000] {subprocess.py:93} INFO - [0m21:49:10  39 of 122 PASS not_null_mart_fixtures_league_name .............................. [[32mPASS[0m in 1.38s]
+[2026-04-09T21:49:10.185+0000] {subprocess.py:93} INFO - [0m21:49:10  40 of 122 START test not_null_mart_fixtures_season ............................. [RUN]
+[2026-04-09T21:49:11.604+0000] {subprocess.py:93} INFO - [0m21:49:11  40 of 122 PASS not_null_mart_fixtures_season ................................... [[32mPASS[0m in 1.42s]
+[2026-04-09T21:49:11.611+0000] {subprocess.py:93} INFO - [0m21:49:11  41 of 122 START test not_null_mart_player_performance_goal_contributions_per_match  [RUN]
+[2026-04-09T21:49:12.939+0000] {subprocess.py:93} INFO - [0m21:49:12  41 of 122 PASS not_null_mart_player_performance_goal_contributions_per_match ... [[32mPASS[0m in 1.33s]
+[2026-04-09T21:49:12.947+0000] {subprocess.py:93} INFO - [0m21:49:12  42 of 122 START test not_null_mart_player_performance_goals_per_match .......... [RUN]
+[2026-04-09T21:49:14.351+0000] {subprocess.py:93} INFO - [0m21:49:14  42 of 122 PASS not_null_mart_player_performance_goals_per_match ................ [[32mPASS[0m in 1.40s]
+[2026-04-09T21:49:14.355+0000] {subprocess.py:93} INFO - [0m21:49:14  43 of 122 START test not_null_mart_player_performance_league_code .............. [RUN]
+[2026-04-09T21:49:15.850+0000] {subprocess.py:93} INFO - [0m21:49:15  43 of 122 PASS not_null_mart_player_performance_league_code .................... [[32mPASS[0m in 1.49s]
+[2026-04-09T21:49:15.877+0000] {subprocess.py:93} INFO - [0m21:49:15  44 of 122 START test not_null_mart_player_performance_league_name .............. [RUN]
+[2026-04-09T21:49:17.443+0000] {subprocess.py:93} INFO - [0m21:49:17  44 of 122 PASS not_null_mart_player_performance_league_name .................... [[32mPASS[0m in 1.56s]
+[2026-04-09T21:49:17.448+0000] {subprocess.py:93} INFO - [0m21:49:17  45 of 122 START test not_null_mart_player_performance_matches_played ........... [RUN]
+[2026-04-09T21:49:18.723+0000] {subprocess.py:93} INFO - [0m21:49:18  45 of 122 PASS not_null_mart_player_performance_matches_played ................. [[32mPASS[0m in 1.27s]
+[2026-04-09T21:49:18.728+0000] {subprocess.py:93} INFO - [0m21:49:18  46 of 122 START test not_null_mart_player_performance_open_play_goals .......... [RUN]
+[2026-04-09T21:49:20.275+0000] {subprocess.py:93} INFO - [0m21:49:20  46 of 122 PASS not_null_mart_player_performance_open_play_goals ................ [[32mPASS[0m in 1.54s]
+[2026-04-09T21:49:20.280+0000] {subprocess.py:93} INFO - [0m21:49:20  47 of 122 START test not_null_mart_player_performance_percentage_player_contribution  [RUN]
+[2026-04-09T21:49:21.561+0000] {subprocess.py:93} INFO - [0m21:49:21  47 of 122 PASS not_null_mart_player_performance_percentage_player_contribution . [[32mPASS[0m in 1.28s]
+[2026-04-09T21:49:21.568+0000] {subprocess.py:93} INFO - [0m21:49:21  48 of 122 START test not_null_mart_player_performance_player_name .............. [RUN]
+[2026-04-09T21:49:23.072+0000] {subprocess.py:93} INFO - [0m21:49:23  48 of 122 PASS not_null_mart_player_performance_player_name .................... [[32mPASS[0m in 1.50s]
+[2026-04-09T21:49:23.082+0000] {subprocess.py:93} INFO - [0m21:49:23  49 of 122 START test not_null_mart_player_performance_season ................... [RUN]
+[2026-04-09T21:49:24.561+0000] {subprocess.py:93} INFO - [0m21:49:24  49 of 122 PASS not_null_mart_player_performance_season ......................... [[32mPASS[0m in 1.48s]
+[2026-04-09T21:49:24.566+0000] {subprocess.py:93} INFO - [0m21:49:24  50 of 122 START test not_null_mart_player_performance_team_goal_difference ..... [RUN]
+[2026-04-09T21:49:25.986+0000] {subprocess.py:93} INFO - [0m21:49:25  50 of 122 PASS not_null_mart_player_performance_team_goal_difference ........... [[32mPASS[0m in 1.42s]
+[2026-04-09T21:49:25.999+0000] {subprocess.py:93} INFO - [0m21:49:25  51 of 122 START test not_null_mart_player_performance_team_goals_conceded ...... [RUN]
+[2026-04-09T21:49:27.382+0000] {subprocess.py:93} INFO - [0m21:49:27  51 of 122 PASS not_null_mart_player_performance_team_goals_conceded ............ [[32mPASS[0m in 1.38s]
+[2026-04-09T21:49:27.386+0000] {subprocess.py:93} INFO - [0m21:49:27  52 of 122 START test not_null_mart_player_performance_team_goals_scored ........ [RUN]
+[2026-04-09T21:49:28.733+0000] {subprocess.py:93} INFO - [0m21:49:28  52 of 122 PASS not_null_mart_player_performance_team_goals_scored .............. [[32mPASS[0m in 1.35s]
+[2026-04-09T21:49:28.739+0000] {subprocess.py:93} INFO - [0m21:49:28  53 of 122 START test not_null_mart_player_performance_team_name ................ [RUN]
+[2026-04-09T21:49:30.110+0000] {subprocess.py:93} INFO - [0m21:49:30  53 of 122 PASS not_null_mart_player_performance_team_name ...................... [[32mPASS[0m in 1.37s]
+[2026-04-09T21:49:30.123+0000] {subprocess.py:93} INFO - [0m21:49:30  54 of 122 START test not_null_mart_player_performance_team_points .............. [RUN]
+[2026-04-09T21:49:31.418+0000] {subprocess.py:93} INFO - [0m21:49:31  54 of 122 PASS not_null_mart_player_performance_team_points .................... [[32mPASS[0m in 1.29s]
+[2026-04-09T21:49:31.434+0000] {subprocess.py:93} INFO - [0m21:49:31  55 of 122 START test not_null_mart_player_performance_total_player_assists ..... [RUN]
+[2026-04-09T21:49:32.639+0000] {subprocess.py:93} INFO - [0m21:49:32  55 of 122 PASS not_null_mart_player_performance_total_player_assists ........... [[32mPASS[0m in 1.20s]
+[2026-04-09T21:49:32.645+0000] {subprocess.py:93} INFO - [0m21:49:32  56 of 122 START test not_null_mart_player_performance_total_player_goals ....... [RUN]
+[2026-04-09T21:49:33.955+0000] {subprocess.py:93} INFO - [0m21:49:33  56 of 122 PASS not_null_mart_player_performance_total_player_goals ............. [[32mPASS[0m in 1.30s]
+[2026-04-09T21:49:33.982+0000] {subprocess.py:93} INFO - [0m21:49:33  57 of 122 START test not_null_mart_team_performance_avg_total_goals_per_match .. [RUN]
+[2026-04-09T21:49:35.526+0000] {subprocess.py:93} INFO - [0m21:49:35  57 of 122 PASS not_null_mart_team_performance_avg_total_goals_per_match ........ [[32mPASS[0m in 1.54s]
+[2026-04-09T21:49:35.531+0000] {subprocess.py:93} INFO - [0m21:49:35  58 of 122 START test not_null_mart_team_performance_away_draws ................. [RUN]
+[2026-04-09T21:49:36.742+0000] {subprocess.py:93} INFO - [0m21:49:36  58 of 122 PASS not_null_mart_team_performance_away_draws ....................... [[32mPASS[0m in 1.21s]
+[2026-04-09T21:49:36.747+0000] {subprocess.py:93} INFO - [0m21:49:36  59 of 122 START test not_null_mart_team_performance_away_losses ................ [RUN]
+[2026-04-09T21:49:38.059+0000] {subprocess.py:93} INFO - [0m21:49:38  59 of 122 PASS not_null_mart_team_performance_away_losses ...................... [[32mPASS[0m in 1.30s]
+[2026-04-09T21:49:38.072+0000] {subprocess.py:93} INFO - [0m21:49:38  60 of 122 START test not_null_mart_team_performance_away_win_rate .............. [RUN]
+[2026-04-09T21:49:39.348+0000] {subprocess.py:93} INFO - [0m21:49:39  60 of 122 PASS not_null_mart_team_performance_away_win_rate .................... [[32mPASS[0m in 1.27s]
+[2026-04-09T21:49:39.353+0000] {subprocess.py:93} INFO - [0m21:49:39  61 of 122 START test not_null_mart_team_performance_away_wins .................. [RUN]
+[2026-04-09T21:49:40.799+0000] {subprocess.py:93} INFO - [0m21:49:40  61 of 122 PASS not_null_mart_team_performance_away_wins ........................ [[32mPASS[0m in 1.44s]
+[2026-04-09T21:49:40.805+0000] {subprocess.py:93} INFO - [0m21:49:40  62 of 122 START test not_null_mart_team_performance_goals_conceded_per_match ... [RUN]
+[2026-04-09T21:49:42.230+0000] {subprocess.py:93} INFO - [0m21:49:42  62 of 122 PASS not_null_mart_team_performance_goals_conceded_per_match ......... [[32mPASS[0m in 1.42s]
+[2026-04-09T21:49:42.234+0000] {subprocess.py:93} INFO - [0m21:49:42  63 of 122 START test not_null_mart_team_performance_goals_scored_per_match ..... [RUN]
+[2026-04-09T21:49:43.536+0000] {subprocess.py:93} INFO - [0m21:49:43  63 of 122 PASS not_null_mart_team_performance_goals_scored_per_match ........... [[32mPASS[0m in 1.30s]
+[2026-04-09T21:49:43.554+0000] {subprocess.py:93} INFO - [0m21:49:43  64 of 122 START test not_null_mart_team_performance_home_draws ................. [RUN]
+[2026-04-09T21:49:44.740+0000] {subprocess.py:93} INFO - [0m21:49:44  64 of 122 PASS not_null_mart_team_performance_home_draws ....................... [[32mPASS[0m in 1.18s]
+[2026-04-09T21:49:44.745+0000] {subprocess.py:93} INFO - [0m21:49:44  65 of 122 START test not_null_mart_team_performance_home_losses ................ [RUN]
+[2026-04-09T21:49:45.911+0000] {subprocess.py:93} INFO - [0m21:49:45  65 of 122 PASS not_null_mart_team_performance_home_losses ...................... [[32mPASS[0m in 1.16s]
+[2026-04-09T21:49:45.915+0000] {subprocess.py:93} INFO - [0m21:49:45  66 of 122 START test not_null_mart_team_performance_home_win_rate .............. [RUN]
+[2026-04-09T21:49:47.301+0000] {subprocess.py:93} INFO - [0m21:49:47  66 of 122 PASS not_null_mart_team_performance_home_win_rate .................... [[32mPASS[0m in 1.38s]
+[2026-04-09T21:49:47.307+0000] {subprocess.py:93} INFO - [0m21:49:47  67 of 122 START test not_null_mart_team_performance_home_wins .................. [RUN]
+[2026-04-09T21:49:48.451+0000] {subprocess.py:93} INFO - [0m21:49:48  67 of 122 PASS not_null_mart_team_performance_home_wins ........................ [[32mPASS[0m in 1.14s]
+[2026-04-09T21:49:48.455+0000] {subprocess.py:93} INFO - [0m21:49:48  68 of 122 START test not_null_mart_team_performance_league_name ................ [RUN]
+[2026-04-09T21:49:49.612+0000] {subprocess.py:93} INFO - [0m21:49:49  68 of 122 PASS not_null_mart_team_performance_league_name ...................... [[32mPASS[0m in 1.15s]
+[2026-04-09T21:49:49.633+0000] {subprocess.py:93} INFO - [0m21:49:49  69 of 122 START test not_null_mart_team_performance_matches_played ............. [RUN]
+[2026-04-09T21:49:51.664+0000] {subprocess.py:93} INFO - [0m21:49:51  69 of 122 PASS not_null_mart_team_performance_matches_played ................... [[32mPASS[0m in 2.02s]
+[2026-04-09T21:49:51.669+0000] {subprocess.py:93} INFO - [0m21:49:51  70 of 122 START test not_null_mart_team_performance_points ..................... [RUN]
+[2026-04-09T21:49:52.820+0000] {subprocess.py:93} INFO - [0m21:49:52  70 of 122 PASS not_null_mart_team_performance_points ........................... [[32mPASS[0m in 1.15s]
+[2026-04-09T21:49:52.826+0000] {subprocess.py:93} INFO - [0m21:49:52  71 of 122 START test not_null_mart_team_performance_position ................... [RUN]
+[2026-04-09T21:49:54.114+0000] {subprocess.py:93} INFO - [0m21:49:54  71 of 122 PASS not_null_mart_team_performance_position ......................... [[32mPASS[0m in 1.29s]
+[2026-04-09T21:49:54.120+0000] {subprocess.py:93} INFO - [0m21:49:54  72 of 122 START test not_null_mart_team_performance_season ..................... [RUN]
+[2026-04-09T21:49:55.498+0000] {subprocess.py:93} INFO - [0m21:49:55  72 of 122 PASS not_null_mart_team_performance_season ........................... [[32mPASS[0m in 1.38s]
+[2026-04-09T21:49:55.512+0000] {subprocess.py:93} INFO - [0m21:49:55  73 of 122 START test not_null_mart_team_performance_team_form .................. [RUN]
+[2026-04-09T21:49:56.670+0000] {subprocess.py:93} INFO - [0m21:49:56  73 of 122 PASS not_null_mart_team_performance_team_form ........................ [[32mPASS[0m in 1.16s]
+[2026-04-09T21:49:56.675+0000] {subprocess.py:93} INFO - [0m21:49:56  74 of 122 START test not_null_mart_team_performance_team_form_away ............. [RUN]
+[2026-04-09T21:49:57.937+0000] {subprocess.py:93} INFO - [0m21:49:57  74 of 122 PASS not_null_mart_team_performance_team_form_away ................... [[32mPASS[0m in 1.26s]
+[2026-04-09T21:49:57.943+0000] {subprocess.py:93} INFO - [0m21:49:57  75 of 122 START test not_null_mart_team_performance_team_form_home ............. [RUN]
+[2026-04-09T21:49:59.207+0000] {subprocess.py:93} INFO - [0m21:49:59  75 of 122 PASS not_null_mart_team_performance_team_form_home ................... [[32mPASS[0m in 1.26s]
+[2026-04-09T21:49:59.211+0000] {subprocess.py:93} INFO - [0m21:49:59  76 of 122 START test not_null_mart_team_performance_team_id .................... [RUN]
+[2026-04-09T21:50:00.644+0000] {subprocess.py:93} INFO - [0m21:50:00  76 of 122 PASS not_null_mart_team_performance_team_id .......................... [[32mPASS[0m in 1.43s]
+[2026-04-09T21:50:00.648+0000] {subprocess.py:93} INFO - [0m21:50:00  77 of 122 START test not_null_mart_team_performance_team_name .................. [RUN]
+[2026-04-09T21:50:01.852+0000] {subprocess.py:93} INFO - [0m21:50:01  77 of 122 PASS not_null_mart_team_performance_team_name ........................ [[32mPASS[0m in 1.20s]
+[2026-04-09T21:50:01.861+0000] {subprocess.py:93} INFO - [0m21:50:01  78 of 122 START test not_null_mart_team_performance_total_away_goals_conceded .. [RUN]
+[2026-04-09T21:50:03.284+0000] {subprocess.py:93} INFO - [0m21:50:03  78 of 122 PASS not_null_mart_team_performance_total_away_goals_conceded ........ [[32mPASS[0m in 1.42s]
+[2026-04-09T21:50:03.301+0000] {subprocess.py:93} INFO - [0m21:50:03  79 of 122 START test not_null_mart_team_performance_total_away_goals_scored .... [RUN]
+[2026-04-09T21:50:04.723+0000] {subprocess.py:93} INFO - [0m21:50:04  79 of 122 PASS not_null_mart_team_performance_total_away_goals_scored .......... [[32mPASS[0m in 1.42s]
+[2026-04-09T21:50:04.740+0000] {subprocess.py:93} INFO - [0m21:50:04  80 of 122 START test not_null_mart_team_performance_total_draws ................ [RUN]
+[2026-04-09T21:50:06.007+0000] {subprocess.py:93} INFO - [0m21:50:06  80 of 122 PASS not_null_mart_team_performance_total_draws ...................... [[32mPASS[0m in 1.26s]
+[2026-04-09T21:50:06.014+0000] {subprocess.py:93} INFO - [0m21:50:06  81 of 122 START test not_null_mart_team_performance_total_goals_conceded ....... [RUN]
+[2026-04-09T21:50:07.458+0000] {subprocess.py:93} INFO - [0m21:50:07  81 of 122 PASS not_null_mart_team_performance_total_goals_conceded ............. [[32mPASS[0m in 1.44s]
+[2026-04-09T21:50:07.465+0000] {subprocess.py:93} INFO - [0m21:50:07  82 of 122 START test not_null_mart_team_performance_total_goals_scored ......... [RUN]
+[2026-04-09T21:50:08.708+0000] {subprocess.py:93} INFO - [0m21:50:08  82 of 122 PASS not_null_mart_team_performance_total_goals_scored ............... [[32mPASS[0m in 1.24s]
+[2026-04-09T21:50:08.714+0000] {subprocess.py:93} INFO - [0m21:50:08  83 of 122 START test not_null_mart_team_performance_total_home_goals_conceded .. [RUN]
+[2026-04-09T21:50:10.064+0000] {subprocess.py:93} INFO - [0m21:50:10  83 of 122 PASS not_null_mart_team_performance_total_home_goals_conceded ........ [[32mPASS[0m in 1.34s]
+[2026-04-09T21:50:10.080+0000] {subprocess.py:93} INFO - [0m21:50:10  84 of 122 START test not_null_mart_team_performance_total_home_goals_scored .... [RUN]
+[2026-04-09T21:50:11.343+0000] {subprocess.py:93} INFO - [0m21:50:11  84 of 122 PASS not_null_mart_team_performance_total_home_goals_scored .......... [[32mPASS[0m in 1.26s]
+[2026-04-09T21:50:11.351+0000] {subprocess.py:93} INFO - [0m21:50:11  85 of 122 START test not_null_mart_team_performance_total_losses ............... [RUN]
+[2026-04-09T21:50:12.626+0000] {subprocess.py:93} INFO - [0m21:50:12  85 of 122 PASS not_null_mart_team_performance_total_losses ..................... [[32mPASS[0m in 1.27s]
+[2026-04-09T21:50:12.630+0000] {subprocess.py:93} INFO - [0m21:50:12  86 of 122 START test not_null_mart_team_performance_total_wins ................. [RUN]
+[2026-04-09T21:50:14.008+0000] {subprocess.py:93} INFO - [0m21:50:14  86 of 122 PASS not_null_mart_team_performance_total_wins ....................... [[32mPASS[0m in 1.37s]
+[2026-04-09T21:50:14.034+0000] {subprocess.py:93} INFO - [0m21:50:14  87 of 122 START test not_null_stg_fixtures_away_team_id ........................ [RUN]
+[2026-04-09T21:50:17.804+0000] {subprocess.py:93} INFO - [0m21:50:17  87 of 122 WARN 5 not_null_stg_fixtures_away_team_id ............................ [[33mWARN 5[0m in 3.77s]
+[2026-04-09T21:50:17.811+0000] {subprocess.py:93} INFO - [0m21:50:17  88 of 122 START test not_null_stg_fixtures_away_team_name ...................... [RUN]
+[2026-04-09T21:50:20.006+0000] {subprocess.py:93} INFO - [0m21:50:20  88 of 122 WARN 5 not_null_stg_fixtures_away_team_name .......................... [[33mWARN 5[0m in 2.19s]
+[2026-04-09T21:50:20.014+0000] {subprocess.py:93} INFO - [0m21:50:20  89 of 122 START test not_null_stg_fixtures_fixture_date ........................ [RUN]
+[2026-04-09T21:50:21.756+0000] {subprocess.py:93} INFO - [0m21:50:21  89 of 122 PASS not_null_stg_fixtures_fixture_date .............................. [[32mPASS[0m in 1.74s]
+[2026-04-09T21:50:21.782+0000] {subprocess.py:93} INFO - [0m21:50:21  90 of 122 START test not_null_stg_fixtures_fixture_id .......................... [RUN]
+[2026-04-09T21:50:23.144+0000] {subprocess.py:93} INFO - [0m21:50:23  90 of 122 PASS not_null_stg_fixtures_fixture_id ................................ [[32mPASS[0m in 1.36s]
+[2026-04-09T21:50:23.151+0000] {subprocess.py:93} INFO - [0m21:50:23  91 of 122 START test not_null_stg_fixtures_fixture_status ...................... [RUN]
+[2026-04-09T21:50:24.737+0000] {subprocess.py:93} INFO - [0m21:50:24  91 of 122 PASS not_null_stg_fixtures_fixture_status ............................ [[32mPASS[0m in 1.58s]
+[2026-04-09T21:50:24.757+0000] {subprocess.py:93} INFO - [0m21:50:24  92 of 122 START test not_null_stg_fixtures_home_team_id ........................ [RUN]
+[2026-04-09T21:50:26.249+0000] {subprocess.py:93} INFO - [0m21:50:26  92 of 122 WARN 5 not_null_stg_fixtures_home_team_id ............................ [[33mWARN 5[0m in 1.49s]
+[2026-04-09T21:50:26.253+0000] {subprocess.py:93} INFO - [0m21:50:26  93 of 122 START test not_null_stg_fixtures_home_team_name ...................... [RUN]
+[2026-04-09T21:50:27.820+0000] {subprocess.py:93} INFO - [0m21:50:27  93 of 122 WARN 5 not_null_stg_fixtures_home_team_name .......................... [[33mWARN 5[0m in 1.57s]
+[2026-04-09T21:50:27.825+0000] {subprocess.py:93} INFO - [0m21:50:27  94 of 122 START test not_null_stg_fixtures_league_code ......................... [RUN]
+[2026-04-09T21:50:29.193+0000] {subprocess.py:93} INFO - [0m21:50:29  94 of 122 PASS not_null_stg_fixtures_league_code ............................... [[32mPASS[0m in 1.37s]
+[2026-04-09T21:50:29.198+0000] {subprocess.py:93} INFO - [0m21:50:29  95 of 122 START test not_null_stg_fixtures_league_name ......................... [RUN]
+[2026-04-09T21:50:30.788+0000] {subprocess.py:93} INFO - [0m21:50:30  95 of 122 PASS not_null_stg_fixtures_league_name ............................... [[32mPASS[0m in 1.59s]
+[2026-04-09T21:50:30.792+0000] {subprocess.py:93} INFO - [0m21:50:30  96 of 122 START test not_null_stg_fixtures_season .............................. [RUN]
+[2026-04-09T21:50:32.230+0000] {subprocess.py:93} INFO - [0m21:50:32  96 of 122 PASS not_null_stg_fixtures_season .................................... [[32mPASS[0m in 1.44s]
+[2026-04-09T21:50:32.251+0000] {subprocess.py:93} INFO - [0m21:50:32  97 of 122 START test not_null_stg_standings_goal_difference .................... [RUN]
+[2026-04-09T21:50:33.918+0000] {subprocess.py:93} INFO - [0m21:50:33  97 of 122 PASS not_null_stg_standings_goal_difference .......................... [[32mPASS[0m in 1.66s]
+[2026-04-09T21:50:33.935+0000] {subprocess.py:93} INFO - [0m21:50:33  98 of 122 START test not_null_stg_standings_goals_against ...................... [RUN]
+[2026-04-09T21:50:35.424+0000] {subprocess.py:93} INFO - [0m21:50:35  98 of 122 PASS not_null_stg_standings_goals_against ............................ [[32mPASS[0m in 1.49s]
+[2026-04-09T21:50:35.429+0000] {subprocess.py:93} INFO - [0m21:50:35  99 of 122 START test not_null_stg_standings_goals_for .......................... [RUN]
+[2026-04-09T21:50:36.966+0000] {subprocess.py:93} INFO - [0m21:50:36  99 of 122 PASS not_null_stg_standings_goals_for ................................ [[32mPASS[0m in 1.53s]
+[2026-04-09T21:50:36.976+0000] {subprocess.py:93} INFO - [0m21:50:36  100 of 122 START test not_null_stg_standings_league_code ....................... [RUN]
+[2026-04-09T21:50:38.506+0000] {subprocess.py:93} INFO - [0m21:50:38  100 of 122 PASS not_null_stg_standings_league_code ............................. [[32mPASS[0m in 1.53s]
+[2026-04-09T21:50:38.509+0000] {subprocess.py:93} INFO - [0m21:50:38  101 of 122 START test not_null_stg_standings_league_name ....................... [RUN]
+[2026-04-09T21:50:39.932+0000] {subprocess.py:93} INFO - [0m21:50:39  101 of 122 PASS not_null_stg_standings_league_name ............................. [[32mPASS[0m in 1.42s]
+[2026-04-09T21:50:39.944+0000] {subprocess.py:93} INFO - [0m21:50:39  102 of 122 START test not_null_stg_standings_matches_draw ...................... [RUN]
+[2026-04-09T21:50:41.476+0000] {subprocess.py:93} INFO - [0m21:50:41  102 of 122 PASS not_null_stg_standings_matches_draw ............................ [[32mPASS[0m in 1.53s]
+[2026-04-09T21:50:41.481+0000] {subprocess.py:93} INFO - [0m21:50:41  103 of 122 START test not_null_stg_standings_matches_lost ...................... [RUN]
+[2026-04-09T21:50:42.990+0000] {subprocess.py:93} INFO - [0m21:50:42  103 of 122 PASS not_null_stg_standings_matches_lost ............................ [[32mPASS[0m in 1.51s]
+[2026-04-09T21:50:42.994+0000] {subprocess.py:93} INFO - [0m21:50:42  104 of 122 START test not_null_stg_standings_matches_played .................... [RUN]
+[2026-04-09T21:50:44.330+0000] {subprocess.py:93} INFO - [0m21:50:44  104 of 122 PASS not_null_stg_standings_matches_played .......................... [[32mPASS[0m in 1.33s]
+[2026-04-09T21:50:44.335+0000] {subprocess.py:93} INFO - [0m21:50:44  105 of 122 START test not_null_stg_standings_matches_won ....................... [RUN]
+[2026-04-09T21:50:45.499+0000] {subprocess.py:93} INFO - [0m21:50:45  105 of 122 PASS not_null_stg_standings_matches_won ............................. [[32mPASS[0m in 1.16s]
+[2026-04-09T21:50:45.504+0000] {subprocess.py:93} INFO - [0m21:50:45  106 of 122 START test not_null_stg_standings_points ............................ [RUN]
+[2026-04-09T21:50:47.264+0000] {subprocess.py:93} INFO - [0m21:50:47  106 of 122 PASS not_null_stg_standings_points .................................. [[32mPASS[0m in 1.76s]
+[2026-04-09T21:50:47.269+0000] {subprocess.py:93} INFO - [0m21:50:47  107 of 122 START test not_null_stg_standings_position .......................... [RUN]
+[2026-04-09T21:50:48.726+0000] {subprocess.py:93} INFO - [0m21:50:48  107 of 122 PASS not_null_stg_standings_position ................................ [[32mPASS[0m in 1.46s]
+[2026-04-09T21:50:48.730+0000] {subprocess.py:93} INFO - [0m21:50:48  108 of 122 START test not_null_stg_standings_season ............................ [RUN]
+[2026-04-09T21:50:50.498+0000] {subprocess.py:93} INFO - [0m21:50:50  108 of 122 PASS not_null_stg_standings_season .................................. [[32mPASS[0m in 1.77s]
+[2026-04-09T21:50:50.503+0000] {subprocess.py:93} INFO - [0m21:50:50  109 of 122 START test not_null_stg_standings_team_id ........................... [RUN]
+[2026-04-09T21:50:51.929+0000] {subprocess.py:93} INFO - [0m21:50:51  109 of 122 PASS not_null_stg_standings_team_id ................................. [[32mPASS[0m in 1.42s]
+[2026-04-09T21:50:51.932+0000] {subprocess.py:93} INFO - [0m21:50:51  110 of 122 START test not_null_stg_standings_team_name ......................... [RUN]
+[2026-04-09T21:50:53.275+0000] {subprocess.py:93} INFO - [0m21:50:53  110 of 122 PASS not_null_stg_standings_team_name ............................... [[32mPASS[0m in 1.34s]
+[2026-04-09T21:50:53.283+0000] {subprocess.py:93} INFO - [0m21:50:53  111 of 122 START test not_null_stg_top_scorers_league_code ..................... [RUN]
+[2026-04-09T21:50:54.982+0000] {subprocess.py:93} INFO - [0m21:50:54  111 of 122 PASS not_null_stg_top_scorers_league_code ........................... [[32mPASS[0m in 1.70s]
+[2026-04-09T21:50:54.986+0000] {subprocess.py:93} INFO - [0m21:50:54  112 of 122 START test not_null_stg_top_scorers_league_name ..................... [RUN]
+[2026-04-09T21:50:56.516+0000] {subprocess.py:93} INFO - [0m21:50:56  112 of 122 PASS not_null_stg_top_scorers_league_name ........................... [[32mPASS[0m in 1.53s]
+[2026-04-09T21:50:56.520+0000] {subprocess.py:93} INFO - [0m21:50:56  113 of 122 START test not_null_stg_top_scorers_player_id ....................... [RUN]
+[2026-04-09T21:50:58.365+0000] {subprocess.py:93} INFO - [0m21:50:58  113 of 122 PASS not_null_stg_top_scorers_player_id ............................. [[32mPASS[0m in 1.84s]
+[2026-04-09T21:50:58.373+0000] {subprocess.py:93} INFO - [0m21:50:58  114 of 122 START test not_null_stg_top_scorers_player_name ..................... [RUN]
+[2026-04-09T21:50:59.663+0000] {subprocess.py:93} INFO - [0m21:50:59  114 of 122 PASS not_null_stg_top_scorers_player_name ........................... [[32mPASS[0m in 1.29s]
+[2026-04-09T21:50:59.667+0000] {subprocess.py:93} INFO - [0m21:50:59  115 of 122 START test not_null_stg_top_scorers_season .......................... [RUN]
+[2026-04-09T21:51:00.939+0000] {subprocess.py:93} INFO - [0m21:51:00  115 of 122 PASS not_null_stg_top_scorers_season ................................ [[32mPASS[0m in 1.27s]
+[2026-04-09T21:51:00.950+0000] {subprocess.py:93} INFO - [0m21:51:00  116 of 122 START test not_null_stg_top_scorers_team_id ......................... [RUN]
+[2026-04-09T21:51:02.284+0000] {subprocess.py:93} INFO - [0m21:51:02  116 of 122 PASS not_null_stg_top_scorers_team_id ............................... [[32mPASS[0m in 1.33s]
+[2026-04-09T21:51:02.296+0000] {subprocess.py:93} INFO - [0m21:51:02  117 of 122 START test not_null_stg_top_scorers_team_name ....................... [RUN]
+[2026-04-09T21:51:03.601+0000] {subprocess.py:93} INFO - [0m21:51:03  117 of 122 PASS not_null_stg_top_scorers_team_name ............................. [[32mPASS[0m in 1.30s]
+[2026-04-09T21:51:03.618+0000] {subprocess.py:93} INFO - [0m21:51:03  118 of 122 START test not_null_stg_top_scorers_total_assists ................... [RUN]
+[2026-04-09T21:51:05.256+0000] {subprocess.py:93} INFO - [0m21:51:05  118 of 122 WARN 7 not_null_stg_top_scorers_total_assists ....................... [[33mWARN 7[0m in 1.63s]
+[2026-04-09T21:51:05.269+0000] {subprocess.py:93} INFO - [0m21:51:05  119 of 122 START test not_null_stg_top_scorers_total_goals ..................... [RUN]
+[2026-04-09T21:51:06.891+0000] {subprocess.py:93} INFO - [0m21:51:06  119 of 122 PASS not_null_stg_top_scorers_total_goals ........................... [[32mPASS[0m in 1.62s]
+[2026-04-09T21:51:06.902+0000] {subprocess.py:93} INFO - [0m21:51:06  120 of 122 START test not_null_stg_top_scorers_total_penalties ................. [RUN]
+[2026-04-09T21:51:08.545+0000] {subprocess.py:93} INFO - [0m21:51:08  120 of 122 WARN 9 not_null_stg_top_scorers_total_penalties ..................... [[33mWARN 9[0m in 1.64s]
+[2026-04-09T21:51:08.549+0000] {subprocess.py:93} INFO - [0m21:51:08  121 of 122 START test unique_mart_fixtures_fixture_id .......................... [RUN]
+[2026-04-09T21:51:09.849+0000] {subprocess.py:93} INFO - [0m21:51:09  121 of 122 PASS unique_mart_fixtures_fixture_id ................................ [[32mPASS[0m in 1.30s]
+[2026-04-09T21:51:09.859+0000] {subprocess.py:93} INFO - [0m21:51:09  122 of 122 START test unique_stg_fixtures_fixture_id ........................... [RUN]
+[2026-04-09T21:51:11.453+0000] {subprocess.py:93} INFO - [0m21:51:11  122 of 122 PASS unique_stg_fixtures_fixture_id ................................. [[32mPASS[0m in 1.59s]
+[2026-04-09T21:51:11.463+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.464+0000] {subprocess.py:93} INFO - [0m21:51:11  Finished running 122 data tests in 0 hours 3 minutes and 5.21 seconds (185.21s).
+[2026-04-09T21:51:11.717+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.718+0000] {subprocess.py:93} INFO - [0m21:51:11  [33mCompleted with 6 warnings:[0m
+[2026-04-09T21:51:11.721+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.724+0000] {subprocess.py:93} INFO - [0m21:51:11  [33mWarning in test not_null_stg_fixtures_away_team_id (dbt/models/staging/schema.yml)[0m
+[2026-04-09T21:51:11.726+0000] {subprocess.py:93} INFO - [0m21:51:11  Got 5 results, configured to warn if != 0
+[2026-04-09T21:51:11.731+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.733+0000] {subprocess.py:93} INFO - [0m21:51:11    compiled code at dbt/target/compiled/football_analytics/dbt/models/staging/schema.yml/not_null_stg_fixtures_away_team_id.sql
+[2026-04-09T21:51:11.735+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.737+0000] {subprocess.py:93} INFO - [0m21:51:11  [33mWarning in test not_null_stg_fixtures_away_team_name (dbt/models/staging/schema.yml)[0m
+[2026-04-09T21:51:11.740+0000] {subprocess.py:93} INFO - [0m21:51:11  Got 5 results, configured to warn if != 0
+[2026-04-09T21:51:11.742+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.744+0000] {subprocess.py:93} INFO - [0m21:51:11    compiled code at dbt/target/compiled/football_analytics/dbt/models/staging/schema.yml/not_null_stg_fixtures_away_team_name.sql
+[2026-04-09T21:51:11.746+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.749+0000] {subprocess.py:93} INFO - [0m21:51:11  [33mWarning in test not_null_stg_fixtures_home_team_id (dbt/models/staging/schema.yml)[0m
+[2026-04-09T21:51:11.753+0000] {subprocess.py:93} INFO - [0m21:51:11  Got 5 results, configured to warn if != 0
+[2026-04-09T21:51:11.756+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.759+0000] {subprocess.py:93} INFO - [0m21:51:11    compiled code at dbt/target/compiled/football_analytics/dbt/models/staging/schema.yml/not_null_stg_fixtures_home_team_id.sql
+[2026-04-09T21:51:11.761+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.763+0000] {subprocess.py:93} INFO - [0m21:51:11  [33mWarning in test not_null_stg_fixtures_home_team_name (dbt/models/staging/schema.yml)[0m
+[2026-04-09T21:51:11.765+0000] {subprocess.py:93} INFO - [0m21:51:11  Got 5 results, configured to warn if != 0
+[2026-04-09T21:51:11.767+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.769+0000] {subprocess.py:93} INFO - [0m21:51:11    compiled code at dbt/target/compiled/football_analytics/dbt/models/staging/schema.yml/not_null_stg_fixtures_home_team_name.sql
+[2026-04-09T21:51:11.771+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.774+0000] {subprocess.py:93} INFO - [0m21:51:11  [33mWarning in test not_null_stg_top_scorers_total_assists (dbt/models/staging/schema.yml)[0m
+[2026-04-09T21:51:11.775+0000] {subprocess.py:93} INFO - [0m21:51:11  Got 7 results, configured to warn if != 0
+[2026-04-09T21:51:11.777+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.779+0000] {subprocess.py:93} INFO - [0m21:51:11    compiled code at dbt/target/compiled/football_analytics/dbt/models/staging/schema.yml/not_null_stg_top_scorers_total_assists.sql
+[2026-04-09T21:51:11.780+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.782+0000] {subprocess.py:93} INFO - [0m21:51:11  [33mWarning in test not_null_stg_top_scorers_total_penalties (dbt/models/staging/schema.yml)[0m
+[2026-04-09T21:51:11.783+0000] {subprocess.py:93} INFO - [0m21:51:11  Got 9 results, configured to warn if != 0
+[2026-04-09T21:51:11.784+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.785+0000] {subprocess.py:93} INFO - [0m21:51:11    compiled code at dbt/target/compiled/football_analytics/dbt/models/staging/schema.yml/not_null_stg_top_scorers_total_penalties.sql
+[2026-04-09T21:51:11.786+0000] {subprocess.py:93} INFO - [0m21:51:11
+[2026-04-09T21:51:11.788+0000] {subprocess.py:93} INFO - [0m21:51:11  Done. PASS=116 WARN=6 ERROR=0 SKIP=0 TOTAL=122
+[2026-04-09T21:51:12.934+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2026-04-09T21:51:12.997+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=daily_football_ingestion, task_id=dbt_test, execution_date=20260408T070000, start_date=20260409T214800, end_date=20260409T215112
+[2026-04-09T21:51:13.039+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2026-04-09T21:51:13.064+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
