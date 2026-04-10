@@ -4,9 +4,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
-
 def get_client() -> bigquery.Client:
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/opt/airflow/credentials.json"
     return bigquery.Client(project="football-analytics-492122")
 
 def load_json_to_bigquery(data: list, dataset: str, table: str, schema: list) -> None:
@@ -22,4 +21,4 @@ def load_json_to_bigquery(data: list, dataset: str, table: str, schema: list) ->
     job = client.load_table_from_json(data, table_ref, job_config=job_config)
     job.result()
 
-    print(f"✓ {len(data)} rows loaded in {table_ref}")
+    print(f"Loaded {len(data)} rows into {table_ref}")
