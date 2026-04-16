@@ -28,6 +28,7 @@ away_form as (
 
 select s.team_id
 , s.team_name
+, s.team_crest_url
 , s.league_code
 , s.league_name
 , s.season

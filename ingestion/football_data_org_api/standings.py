@@ -37,6 +37,7 @@ SCHEMA = [
     bigquery.SchemaField("goals_for", "INTEGER"),
     bigquery.SchemaField("goals_against", "INTEGER"),
     bigquery.SchemaField("goal_difference", "INTEGER"),
+    bigquery.SchemaField("team_crest_url", "STRING"),
 ]
 
 def get_standings(league_code: str) -> list:
@@ -66,6 +67,7 @@ def parse_standing(row: dict, league_code: str, league_name: str, season: str) -
         "goals_for": row["goalsFor"],
         "goals_against": row["goalsAgainst"],
         "goal_difference": row["goalDifference"],
+        "team_crest_url": row["team"]["crest"],
     }
 
 def main():
@@ -77,7 +79,7 @@ def main():
         for row in table:
             parsed = parse_standing(row, league_code, league_name, season)
             all_standings.append(parsed)
-        print(f"  → {len(table)} teams found")
+        print(f"  -> {len(table)} teams found")
 
     print(f"\nTotal: {len(all_standings)} extracted rows")
     print("Loading to BigQuery...")

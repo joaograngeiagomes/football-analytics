@@ -4,6 +4,7 @@ select league_code
 , position
 , team_id
 , team_name
+, team_crest_url
 , played_games as matches_played
 , won as matches_won
 , draw as matches_draw
